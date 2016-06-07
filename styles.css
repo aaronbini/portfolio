@@ -1,0 +1,51 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/*h1, h2, h3 {*/
+  /*width: 50px;*/
+  /*margin: 5px;*/
+  /*padding: 5px;*/
+/*}*/
+
+.projects {
+  background-color: #00ffbf;
+  margin: 4%;
+  text-align: center;
+  height: 100px;
+}
+
+.projects:hover {
+  background-color: #00b38f;
+}
+
+.about {
+  background-color: #ccb3ff;
+  margin: 4%;
+  text-align: center;
+  height: 200px;
+}
+
+.about:hover {
+  background-color: #b366ff;
+}
+
+.contact {
+  background-color: #ffcc99;
+  margin: 4%;
+  text-align: center;
+  height: 200px;
+}
+
+.contact:hover {
+  background-color: #ffb366;
+}
+
+#main-header {
+  background-color: #00ffbf;
+  opacity: 0.5;
+}
+
+#main-header li {
+  display: block;
+}
