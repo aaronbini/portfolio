@@ -41,6 +41,18 @@ body {
   background-color: #ffb366;
 }
 
+.articleTemplate {
+  display: none;
+}
+
+.image {
+  display: none;
+}
+
+.image:hover {
+  display: block;
+}
+
 #main-header {
   background-color: #00ffbf;
   opacity: 0.5;
