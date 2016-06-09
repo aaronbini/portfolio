@@ -25,7 +25,7 @@ Project.prototype.createHTML = function () {
   $newProject.removeClass('articleTemplate');
   console.log($newProject.html());
   return $newProject;
-}
+};
 
 projects.sort(function(a,b){
   return (new Date(b.dateFinished)) - (new Date(a.dateFinished));
@@ -37,4 +37,4 @@ projects.forEach(function(element){
 
 projectsArray.forEach(function(element){
   $('#projectsHighlighted').append(element.createHTML());
-})
+});
