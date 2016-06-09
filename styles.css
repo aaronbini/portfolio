@@ -2,11 +2,20 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
-/*h1, h2, h3 {*/
-  /*width: 50px;*/
-  /*margin: 5px;*/
-  /*padding: 5px;*/
-/*}*/
+img, video, canvas {
+  max-width: 100%;
+}
+
+.hamburger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 2%;
+}
+
+.navigate {
+  display: none;
+}
 
 .projects {
   background-color: #00ffbf;
@@ -60,4 +69,15 @@ body {
 
 #main-header li {
   display: block;
+}
+
+@media screen and (min-width: 450px), handheld and (orientation: landscape) {
+  .hamburger {
+    display: none;
+  }
+
+  .navigate {
+    display: block;
+    float: right;
+  }
 }
