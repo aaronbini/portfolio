@@ -68,7 +68,7 @@ img, video, canvas {
 }
 
 #main-header li {
-  display: block;
+  display: inline;
 }
 
 @media screen and (min-width: 450px), handheld and (orientation: landscape) {
