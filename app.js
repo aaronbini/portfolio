@@ -23,7 +23,7 @@ Project.prototype.createHTML = function () {
 
   $newProject.append('<hr>');
   $newProject.removeClass('articleTemplate');
-  console.log($newProject.html());
+  //console.log($newProject.html());
   return $newProject;
 };
 

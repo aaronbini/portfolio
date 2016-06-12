@@ -70,6 +70,9 @@ img, video, canvas {
 #main-header li {
   display: block;
 }
+.hide-initial {
+  display: none;
+}
 
 @media screen and (min-width: 450px), handheld and (orientation: landscape) {
   .hamburger {

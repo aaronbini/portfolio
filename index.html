@@ -22,7 +22,17 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="container">
+  <script type="text/template">
+    <article data-category="{{category}}" class="articleTemplate">
+      <h3>{{title}}</h3>
+      <div>
+        finished <time pubdate>{{dateFinished}}</time>
+        <address><a href='{{url}}'>View Project</a></address>
+      </div>
+      <section class="description">{{description}}</section>
+    </article>
+  </script>
+    <div id="top" class="container">
       <!-- <header id="main-header"> -->
         <div class="row">
           <div class="col-md-10">
@@ -30,11 +40,12 @@
           </div>
           <div class="col-md-2">
             <input type="image" class='hamburger' src='hamburger.svg'/>
-            <nav class="navigate">
+            <nav id= "navbar" class="navigate">
               <ul>
-                <li data-content="articles"><a href="#" class="icon-home"> Home</a></li>
-                <li data-content="about"><a href="#" class="icon-link"> About</a></li>
-                <li data-content="about"><a href="#" class="icon-link"> Photos</a></li>
+                <li id="homeNav" data-content="articles"><a href="#navbar" class="icon-home"> Home</a></li>
+                <li id="aboutNav" data-content="about"><a href="#" class="icon-link"> About</a></li>
+                <li id="interestsNav" data-content="interests"><a href="#interests" class="icon-link"> Interests</a></li>
+                <li id="projectsNav" data-content="projects"><a href="#projectsHighlighted" class="icon-link"> Projects</a></li>
                 <li><a href="http://github.com/aaronbini" target="_blank" class="icon-github"> GitHub</a></li>
               </ul>
             </nav>
@@ -42,12 +53,12 @@
         </div>
       <!-- </header> -->
       <div class='main'>
-          <div id="about" class="row">
+          <div id="mainInfo" class="row">
 
-            <div id="contact" class="about col-md-6">
+            <div id="about" class="about col-md-6 hide-initial">
               <h3>About</h3>
             </div>
-            <div class="contact col-md-4">
+            <div id="contact" class="contact col-md-4 hide-initial">
                 <h3>Contact</h3>
             </div>
           </div>
@@ -77,6 +88,7 @@
         </div>
       </div>
       <footer>
+        <a href="#top" class="icon-home "> Back to top></a>
       </footer>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
