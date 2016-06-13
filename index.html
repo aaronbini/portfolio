@@ -13,16 +13,35 @@
     <meta charset="utf-8"
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aaron's Portfolio</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   	<!-- Optional theme -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   	<!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,700">
     <link rel="stylesheet" href="/vendor/styles/normalize.css">
+    <link rel="stylesheet" href="icomoon/style.css">
     <link rel="stylesheet" href="styles.css">
+
   </head>
   <body>
-    <div class="container">
+  <script id="project-template" type="text/template">
+    <article data-category="{{category}}">
+      <h3>{{title}}</h3>
+      <div>
+        <time pubdate>{{finishStatus}}</time>
+        <address class="no-bottom-margin"><a href='{{url}}'>View Project</a></address>
+        <address><a href='{{sourceCode}}'>View Source Code</a></address>
+      </div>
+      <section class="description">{{description}}</section>
+    </article>
+  </script>
+  <script id="favorites-template" type="text/template">
+    <h3><a href='{{url}}'>{{title}}</a></h3>
+    <h4>Category: {{category}}</h4>
+    <section class="description">{{description}}</section>
+  </script>
+    <div id="top" class="container">
       <!-- <header id="main-header"> -->
         <div class="row">
           <div class="col-md-10">
@@ -31,11 +50,13 @@
           <div class="col-md-2">
 
             <input type="image" class='hamburger' src='hamburger.svg'/>
-            <nav class="navigate">
-              <ul>
-                <li data-content="articles"><a href="#" class="icon-home"> Home</a></li>
-                <li data-content="about"><a href="#" class="icon-link"> About</a></li>
-                <li data-content="about"><a href="#" class="icon-link"> Photos</a></li>
+            <nav id= "navbar" class="navigate">
+              <ul class="list-unstyled">
+                <li id="homeNav" data-content="home"><a href="#navbar" class="icon-home"> Home</a></li>
+                <li id="aboutNav" data-content="about"><a href="#" class="icon-leaf"> About</a></li>
+                <li id="interestsNav"><a href="#" data-content="interests" class="icon-truck tab"> Favorites</a></li>
+                <li id="hobbiesNav"><a href="#" data-content="hobbies" class="icon-mug tab"> Hobbies</a></li>
+                <li id="projectsNav"><a href="#" data-content="projects" class="icon-earth tab"> Projects</a></li>
                 <li><a href="http://github.com/aaronbini" target="_blank" class="icon-github"> GitHub</a></li>
               </ul>
             </nav>
@@ -43,43 +64,41 @@
         </div>
       <!-- </header> -->
       <div class='main'>
-            <div id="about" class="row">
-            <div id="contact" class="about col-md-6">
-              <h3>About</h3>
-            </div>
-            <div class="contact col-md-4">
-                <h3>Contact</h3>
-            </div>
-          </div>
-          <h2>Selected Projects</h2>
-          <div id="projects" class="row">
-            <div class="projects col-md-5">Project</div>
-            <div class="projects col-md-5">Project</div>
-          </div>
           <div class="row">
-            <div class="projects col-md-5">Project</div>
-            <div class="projects col-md-5">Project</div>
-          </div>
-          <div class="row">
-            <div class="projects col-md-5">Project</div>
-            <div class="projects col-md-5">Project</div>
-          </div>
-          <section id="projectsHighlighted">
-            <article class="articleTemplate">
-              <h3>Title Here</h3>
-              <div>
-                finished <time pubdate>Date Finished</time>
-                <address><a href='#'>View Project</a></address>
+            <section id="aboutContact" class="hide-initial">
+              <div id="about" class="about col-sm-6">
+                <h3>About</h3>
               </div>
-              <section class="description"></section>
-            </article>
+              <div id="contact" class="contact col-sm-4">
+                <h3>Contact</h3>
+              </div>
+            </section>
+          </div>
+          <div class="row">
+            <div id="interests" class="interests col-md-10 tab-content">
+              <h3>Favorite Coding Websites and Tools</h3>
+              <!-- This section will have a category filter which will filter my favorite sites based on their category -->
+              <!-- Output will be styled using a handlebars template -->
+            </div>
+          </div>
+          <div id="hobbies" class="row tab-content">
+            <h2>Hobbies</h2>
+            <div class="projects col-md-5">Rock Climbing</div>
+            <div class="projects col-md-5">Gardening</div>
+          </div>
+          <section id="projects" class="tab-content">
+            <h2>Selected Projects</h2>
           </section>
         </div>
       </div>
       <footer>
+        <a href="#top" class="icon-home "> Back to top></a>
       </footer>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js'></script>
     <script src='projects.js'></script>
     <script src='app.js'></script>
     <script src='interact.js'></script>
