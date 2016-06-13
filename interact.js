@@ -2,9 +2,13 @@ $(function(){
   $('.hamburger').on('click', function(){
     $('nav').toggle();
   });
+
   $('#aboutNav').on('click', function(){
-    console.log('toggle the about');
-    $('#about').toggle(700);
-    $('#contact').toggle(700);
+    $('#aboutContact').toggle(700);
+  });
+
+  $('.navigate').on('click', '.tab', function(e) {
+    $('.tab-content').hide();
+    $('#' + $(this).data('content')).fadeIn(700);
   });
 });

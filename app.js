@@ -10,31 +10,25 @@ function Project(obj) {
 }
 
 Project.prototype.createHTML = function () {
-  var $newProject = $('article.articleTemplate').clone();
+  var template = Handlebars.compile($('#project-template').text());
+  this.daysAgo = parseInt((new Date() - new Date(this.dateFinished))/60/60/24/1000);
+  console.log(this.daysAgo);
+  this.finishStatus = (this.dateFinished !== 'not finished') ? 'finished ' + this.daysAgo + ' days ago' : '(incomplete)';
 
-  $newProject.attr('data-category', this.category);
-
-  $newProject.find('h3').html(this.title);
-  $newProject.find('a').html(this.url);
-  $newProject.find('section.description').html(this.description);
-  $newProject.find('a').attr('href', this.url);
-  $newProject.find('time[pubdate]').attr('title', this.publishedOn);
-  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.dateFinished))/ 60/60/24/1000) + ' days ago');
-
-  $newProject.append('<hr>');
-  $newProject.removeClass('articleTemplate');
-  //console.log($newProject.html());
-  return $newProject;
+  return template(this);
 };
 
-projects.sort(function(a,b){
-  return (new Date(b.dateFinished)) - (new Date(a.dateFinished));
-});
+if (typeof projects !== 'undefined') {
+  projects.sort(function(a,b){
+    return (new Date(b.dateFinished)) - (new Date(a.dateFinished));
+  });
+};
 
 projects.forEach(function(element){
   projectsArray.push(new Project(element));
 });
 
 projectsArray.forEach(function(element){
-  $('#projectsHighlighted').append(element.createHTML());
+  var elToAppend = element.createHTML();
+  $('#projects').append(elToAppend);
 });

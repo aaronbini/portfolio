@@ -10,7 +10,7 @@ var projects = [
 
   {
     title: 'Blood Pressure Tracker',
-    dateFinished: '2016-04-11',
+    dateFinished: 'not finished',
     url: 'notLive',
     description: 'This incomplete project will be a simple application that uses localStorage (but eventually a backend database) in order to allow users to keep track of their daily Blood Pressure reading. This page is built with Javascript, JQuery, HTML, CSS, and uses Chart.js to allow user to view the history of their readings in chart form.',
     sourceCode: 'https://github.com/aaronbini/bpTracker',
@@ -19,7 +19,7 @@ var projects = [
 
   {
     title: 'PDX Farm Finder',
-    dateFinished: '2016-03-15',
+    dateFinished: 'not finished',
     url: 'notLive',
     description: 'This incomplete project will allow users to search for farms in the Portland area by proximity as well as by what the farm grows and sells. This project is built with PHP, a MySQL database, Javascript, HTML, and CSS. The project utilizes the Google Maps API in order to add map search functionality to the page.',
     sourceCode: 'https://github.com/aaronbini/farm_finder',
@@ -28,46 +28,46 @@ var projects = [
 
   {
     title: 'To Do List',
-    dateFinished: '2013-04-11',
+    dateFinished: 'not finished',
     url: 'notLive',
     description: 'This is a simple to-do list app that will allow users to keep track of daily errands and to-dos.',
-    sourceCode: 'notLive',
+    sourceCode: 'N/A',
     category: 'jQuery, CSS, and HTML'
   },
 
   {
     title: 'Sweet App',
-    dateFinished: '2014-04-11',
+    dateFinished: 'not finished',
     url: 'notLive',
     description: 'This WordPress project will be used to ',
-    sourceCode: 'notLive',
+    sourceCode: 'N/A',
     category: 'WordPress'
   },
 
   {
     title: 'Apprentice Manager',
-    dateFinished: '2015-04-11',
+    dateFinished: 'not finished',
     url: 'notLive',
     description: 'This application will be used to track apprentice progress through an electrical apprenticeship program, to be used by apprentices and administrators to monitor program progress and allow apprentices to track their hours worked and their school schedule and grades.',
-    sourceCode: 'notLive',
+    sourceCode: 'N/A',
     category: 'Node.js and MongoDB'
   },
 
   {
     title: 'Best App Ever',
-    dateFinished: '2012-04-11',
+    dateFinished: 'not finished',
     url: 'notLive',
     description: 'This incomplete app will be the best one ever, with so much functionality and a transcendent user experience.',
-    sourceCode: 'notLive',
+    sourceCode: 'N/A',
     category: 'HTML'
   },
 
   {
     title: 'TransportMe!',
-    dateFinished: '2011-04-11',
+    dateFinished: 'not finished',
     url: 'notLive',
     description: 'This app will allow users to physically transport themselves to the location on Google Maps that they select on their phone.',
-    sourceCode: 'notLive',
+    sourceCode: 'N/A',
     category: 'PHP'
   },
 ];
