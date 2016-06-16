@@ -72,33 +72,33 @@ var favorites = [
     category: 'CSS'
   },
   {
-    title: '',
-    url: '',
-    description: '',
-    category: 'jQuery'
+    title: 'JSON Linter',
+    url: 'http://jsonlint.com/',
+    description: 'Check to see if your JSON is valid with this site, very handy.',
+    category: 'JSON'
   },
   {
-    title: '',
-    url: '',
-    description: '',
-    category: 'jQuery'
+    title: 'Mozilla Developer Network',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+    description: 'THE site to visit when you are wondering about anything related to Javascript. It has helped me tremendously while learning Javascript.',
+    category: 'Javascript'
   },
   {
-    title: '',
-    url: '',
-    description: '',
-    category: 'jQuery'
+    title: 'Google Maps API',
+    url: 'https://developers.google.com/maps/',
+    description: 'Want to add a map on your site? Go here to learn how to get started with the Google Maps API.',
+    category: 'Javascript'
   },
   {
-    title: '',
-    url: '',
-    description: '',
-    category: 'jQuery'
+    title: 'Stack Overflow Javascript',
+    url: 'http://stackoverflow.com/questions/tagged/javascript',
+    description: 'Check out Stack Overflow\'s latest Javascript questions. Also any internet searching for code-related questions will inevitably lead you to Stack Overflow. I\'ve learned a lot from this site.',
+    category: 'Javascript'
   },
   {
-    title: '',
-    url: '',
-    description: '',
-    category: 'jQuery'
+    title: 'Can I Use',
+    url: 'http://caniuse.com/',
+    description: 'Useful site that has browser support tables for different front-end web technologies. Check to see if the code you are writing will work in certain browsers.',
+    category: 'Miscellaneous'
   }
 ];

@@ -24,8 +24,10 @@ var projects = [
     description: 'This incomplete project will allow users to search for farms in the Portland area by proximity as well as by what the farm grows and sells. This project is built with PHP, a MySQL database, Javascript, HTML, and CSS. The project utilizes the Google Maps API in order to add map search functionality to the page.',
     sourceCode: 'https://github.com/aaronbini/farm_finder',
     category: 'PHP'
-  },
+  }
+];
 
+var dummyData = [
   {
     title: 'To Do List',
     dateFinished: 'not finished',
@@ -69,5 +71,5 @@ var projects = [
     description: 'This app will allow users to physically transport themselves to the location on Google Maps that they select on their phone.',
     sourceCode: 'N/A',
     category: 'PHP'
-  },
+  }
 ];
