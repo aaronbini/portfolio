@@ -32,3 +32,26 @@ projectsArray.forEach(function(element){
   var elToAppend = element.createHTML();
   $('#projects').append(elToAppend);
 });
+
+var favoritesArray = [];
+
+function Favorite (obj) {
+  this.title = obj.title;
+  this.url = obj.url;
+  this.description = obj.description;
+  this.category = obj.category;
+};
+
+Favorite.prototype.toHTML = function () {
+  var template = Handlebars.compile($('#favorite-template').text());
+  return template(this);
+};
+
+favorites.forEach(function(element){
+  favoritesArray.push(new Favorite(element));
+});
+
+favoritesArray.forEach(function(element){
+  var elToAppend = element.toHTML();
+  $('#interests').append(elToAppend);
+});
