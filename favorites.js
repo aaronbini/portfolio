@@ -81,7 +81,7 @@ var favorites = [
     title: 'Mozilla Developer Network',
     url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
     description: 'THE site to visit when you are wondering about anything related to Javascript. It has helped me tremendously while learning Javascript.',
-    category: 'JavaScript'
+    category: 'Javascript'
   },
   {
     title: 'Google Maps API',

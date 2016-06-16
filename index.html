@@ -44,17 +44,16 @@
     </article>
   </script>
     <div id="top" class="container">
-      <!-- <header id="main-header"> -->
-        <div class="row">
-          <div class="col-md-10">
-            <h1>Aaron Bini</h1>
+        <div class="row header-color">
+          <div class="col-md-6 header-name">
+            <h1 class="header">Aaron Bini</h1>
           </div>
-          <div class="col-md-2">
-
+          <div class="col-md-6 header-nav">
             <input type="image" class='hamburger' src='hamburger.svg'/>
-            <nav id= "navbar" class="navigate">
+            <nav class="navigate">
               <ul class="list-unstyled">
-                <li id="homeNav" data-content="home"><a href="#navbar" class="icon-home"> Home</a></li>
+                <!-- When home is clicked, it should have the same functionality as showAll button -->
+                <li id="homeNav" data-content="home"><a href="#top" class="icon-home"> Home</a></li>
                 <li id="aboutNav" data-content="about"><a href="#" class="icon-leaf"> About</a></li>
                 <li id="interestsNav"><a href="#" data-content="interests" class="icon-truck tab"> Favorites</a></li>
                 <li id="hobbiesNav"><a href="#" data-content="hobbies" class="icon-mug tab"> Hobbies</a></li>
@@ -64,8 +63,8 @@
             </nav>
           </div>
         </div>
-      <!-- </header> -->
       <div class='main'>
+        <!-- change styling on the button, it doesn't fit in -->
         <button id='showAll' class='btn btn-info hide-initial'>Show All Sections</button>
           <div class="row">
             <section id="aboutContact" class="hide-initial">
@@ -77,11 +76,12 @@
               </div>
             </section>
           </div>
-          <section id="projects" class="tab-content">
+          <section id="projects" class="projects tab-content">
             <h2>Selected Projects</h2>
+            <!-- include screenshot of project, needs to be done in template -->
           </section>
           <div class="row">
-            <div id="interests" class="interests col-md-12 tab-content">
+            <div id="interests" class="interests tab-content">
               <h2>Favorite Coding Websites</h2>
               <select id="favorites-filter">
                 <option value="">-- Filter by Topic --</option>
@@ -89,15 +89,15 @@
               <!-- This section will have a category filter which will filter my favorite sites based on their category -->
             </div>
           </div>
-          <div id="hobbies" class="row tab-content">
+          <div id="hobbies" class="row tab-content hobbies">
             <h2>Hobbies</h2>
-            <div class="projects col-md-5">Rock Climbing</div>
-            <div class="projects col-md-5">Gardening</div>
+            <div class="hobbies-sub col-md-5">Rock Climbing</div>
+            <div class="hobbies-sub col-md-5">Gardening</div>
           </div>
       </div>
     </div>
     <footer>
-      <a href="#top" class="icon-home "> Back to top></a>
+      &copy; 2016 Aaron Bini | Just Keep Coding   <a href="#top" class="icon-home "> Back to top></a>
     </footer>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
@@ -108,6 +108,6 @@
     <script src='favorites.js'></script>
     <script src='app.js'></script>
     <script src='interact.js'></script>
-    <script>pageView.indexPageLoad();</script>
+    <script>Project.fetchAll();</script>
   </body>
 </html>
