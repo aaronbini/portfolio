@@ -39,7 +39,7 @@ var projects = [
     title: 'Sweet App',
     dateFinished: 'not finished',
     url: 'notLive',
-    description: 'This WordPress project will be used to ',
+    description: 'This WordPress project will be used to do the things that the user wants to do, when the user wants to do it.',
     sourceCode: 'N/A',
     category: 'WordPress'
   },
