@@ -31,8 +31,8 @@
 }, {
 	"title": "Repl.it",
 	"url": "https://repl.it/languages/javascript",
-	"description": "Use this site for real-time Javascript code experimentation. Built in console allows for immediate assessment of the code you write.",
-	"category": "Javascript"
+	"description": "Use this site for real-time JavaScript code experimentation. Built in console allows for immediate assessment of the code you write.",
+	"category": "JavaScript"
 }, {
 	"title": "Oh-My-ZSH",
 	"url": "https://github.com/robbyrussell/oh-my-zsh",
@@ -41,8 +41,8 @@
 }, {
 	"title": "Chart-JS",
 	"url": "http://www.chartjs.org/",
-	"description": "This Javascript API allows the user to output their data on the screen in nicely designed charts and graphs.",
-	"category": "Javascript"
+	"description": "This JavaScript API allows the user to output their data on the screen in nicely designed charts and graphs.",
+	"category": "JavaScript"
 }, {
 	"title": "SMACCS",
 	"url": "https://smacss.com/book/",
@@ -66,18 +66,18 @@
 }, {
 	"title": "Mozilla Developer Network",
 	"url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-	"description": "THE site to visit when you are wondering about anything related to Javascript. It has helped me tremendously while learning Javascript.",
-	"category": "Javascript"
+	"description": "THE site to visit when you are wondering about anything related to JavaScript. It has helped me tremendously while learning Javascript.",
+	"category": "JavaScript"
 }, {
 	"title": "Google Maps API",
 	"url": "https://developers.google.com/maps/",
 	"description": "Want to add a map on your site? Go here to learn how to get started with the Google Maps API.",
-	"category": "Javascript"
+	"category": "JavaScript"
 }, {
-	"title": "Stack Overflow Javascript",
+	"title": "Stack Overflow JavaScript",
 	"url": "http://stackoverflow.com/questions/tagged/javascript",
-	"description": "Check out Stack Overflow's latest Javascript questions. Also any internet searching for code-related questions will inevitably lead you to Stack Overflow. I've learned a lot from this site.",
-	"category": "Javascript"
+	"description": "Check out Stack Overflow's latest JavaScript questions. Also any internet searching for code-related questions will inevitably lead you to Stack Overflow. I've learned a lot from this site.",
+	"category": "JavaScript"
 }, {
 	"title": "Can I Use",
 	"url": "http://caniuse.com/",

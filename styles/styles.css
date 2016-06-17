@@ -7,6 +7,11 @@ img, video, canvas {
   max-width: 100%;
 }
 
+img {
+  height: 50px;
+  width: 50px;
+}
+
 h1, h2, h3, h4, button {
   font-family: 'Raleway', sans-serif;
 }
@@ -144,6 +149,10 @@ footer a {
   margin-bottom: 0;
 }
 
+.bottom-margin {
+  margin-bottom: 20px;
+}
+
 .hide-initial {
   display: none;
 }
@@ -153,11 +162,13 @@ footer a {
 }
 
 .hamburger {
-  display: block;
   position: fixed;
   top: 0;
   right: 0;
   margin: 2%;
+  /*padding: 20px;*/
+  /*height: 60px;
+  width: 40px;*/
 }
 
 #projects {
@@ -172,15 +183,42 @@ footer a {
   background-color: #00ffbf;
 }
 
-/*.header-nav-post-click {
-  display: block;
-  float: right;
+#showAll {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2%;
+  margin-top: 60px;
+  background-color: transparent;
+  color: black;
+  font-size: 1.25em;
 }
 
-.hamburger-post-click {
-  display: none;
-}*/
+.my-button {
+  background-color: transparent;
+  color: black;
+  font-size: 1.25em;
+  background-color: #d9d9d9;
+}
 
+.my-button:hover {
+  background-color: gray;
+}
+
+.header-nav li {
+  display: inline;
+  margin-right: 7px;
+  font-size: 2.5 em;
+}
+
+.header-nav a {
+  font-size: 1em;
+}
+
+#treehouseStats h3 {
+  display: inline;
+  margin-right: 10px;
+}
 
 @media screen and (min-width: 450px), handheld and (orientation: landscape) {
 
@@ -218,6 +256,10 @@ footer a {
   .header-nav li {
     display: inline;
     margin-right: 15px;
+  }
+
+  .header-nav a {
+    font-size: 1.25em;
   }
 
 }
