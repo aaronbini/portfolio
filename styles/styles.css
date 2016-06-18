@@ -194,6 +194,14 @@ footer a {
   font-size: 1.25em;
 }
 
+#treehouseStats p {
+  font-size: 1.25em;
+}
+
+#treehouseStats a {
+  font-size: 1.5em;
+}
+
 .my-button {
   background-color: transparent;
   color: black;

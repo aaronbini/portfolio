@@ -83,4 +83,9 @@
 	"url": "http://caniuse.com/",
 	"description": "Useful site that has browser support tables for different front-end web technologies. Check to see if the code you are writing will work in certain browsers.",
 	"category": "Miscellaneous"
-}]
+}, {
+	"title": "Treehouse",
+	"url": "http://teamtreehouse.com",
+	"description": "Good site for tutorials in many different web development areas. I've used this quite a bit as a supplement to other learning."
+}
+]

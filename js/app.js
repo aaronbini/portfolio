@@ -41,7 +41,7 @@
       Project.loadAll(JSON.parse(localStorage.rawProjects));
       Favorite.fetchAll();
       viewCallback();
-      parseTreehouse();
+      //parseTreehouse();
       // getMyStats();
     } else {
       var projectJSON = [];
@@ -54,7 +54,7 @@
         localStorage.setItem('rawProjects', JSON.stringify(Project.all));
         Favorite.fetchAll();
         viewCallback();
-        parseTreehouse();
+        //parseTreehouse();
         // getMyStats();
       });
     }
@@ -104,7 +104,7 @@
       });
     }
   };
-  
+
   module.Project = Project;
   module.Favorite = Favorite;
 })(window);
