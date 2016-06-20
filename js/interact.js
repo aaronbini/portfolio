@@ -1,7 +1,6 @@
 //jQuery functions for basic page interaction
 //could make these named functions at some point
 $(function(){
-  var defer = $.Deferred();
 
   $('.hamburger').on('click', function(){
     $('.hamburger').toggle(500);

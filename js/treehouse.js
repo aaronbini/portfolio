@@ -3,11 +3,11 @@
   var treehouse = {};
 
   var pointsArray =  [
-    {'Design': 0},
-    {'HTML': 1157},
-    {'CSS': 1779},
     {'JavaScript': 5408},
+    {'HTML': 1157},
     {'Ruby': 3},
+    {'Design': 0},
+    {'CSS': 1779},
     {'PHP': 1490},
     {'WordPress': 0},
     {'iOS': 0},
@@ -19,7 +19,7 @@
     {'Digital Literacy': 55},
     {'Game Development': 0},
     {'C#': 3},
-    {'Databases': 244}
+    {'Databases': 244},
   ];
 
   treehouse.parseTreehouse = function() {
@@ -39,6 +39,7 @@
       $('#treehouseCourses').html('<p><b><em>Courses Completed</em></b> : ' + courseCount + '</p>');
       $('#treehouseCourses').append('<p><b><em>Badges Earned</em</b> : ' + treehouseJSON[5].length + '</p>');
       $('#treehouseCourses').append('<p><b><em>Points Earned</em</b> : ' + treehouseJSON[6].total + '</p>');
+      //don't think i need to return courseCount here as it is only used within the function
       return courseCount;
     });
   };
@@ -46,9 +47,9 @@
 
   treehouse.classifyExperience = function(obj) {
     for (var x in obj) {
-      if (obj[x] <= 500) {console.log('beginner'); return 'Beginner in: ';} else
-      if (obj[x] <= 2000) {console.log('intermediate'); return 'Intermediate in: ';} else {
-        console.log('advanced');
+      if (obj[x] == 0) {return 'notStarted';} else
+      if (obj[x] <= 500) {return 'Beginner in: ';} else
+      if (obj[x] <= 2000) {return 'Intermediate in: ';} else {
         return 'Advanced in: ';
       }
     }
@@ -56,10 +57,12 @@
 
   treehouse.assessLevel = pointsArray.reduce(function(accumulator, current) {
     var classifier = treehouse.classifyExperience(current);
-    if (!accumulator[classifier]) {
+    if (!accumulator[classifier] && classifier !== 'notStarted') {
       accumulator[classifier] = [];
     };
-    accumulator[classifier].push('  ' + Object.getOwnPropertyNames(current));
+    if (classifier !== 'notStarted') {
+      accumulator[classifier].push('  ' + Object.getOwnPropertyNames(current));
+    }
     return accumulator;
   }, {});
 

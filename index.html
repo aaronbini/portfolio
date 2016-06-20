@@ -12,6 +12,7 @@
   <head>
     <meta charset="utf-8"
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/ >
     <title>Aaron's Portfolio</title>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -53,10 +54,8 @@
             <h1 class="header">Aaron Bini</h1>
           </div>
           <div class="col-md-6 header-nav">
-            <!-- <input type="image" class='hamburger' src='hamburger.svg'/> -->
             <nav class="navigate">
               <ul class="list-unstyled">
-                <!-- When home is clicked, it should have the same functionality as showAll button -->
                 <li id="homeNav" data-content="home"><a href="#top" class="icon-home">Home</a></li>
                 <li id="aboutNav" data-content="about"><a href="#" class="icon-leaf">About</a></li>
                 <li id="interestsNav"><a href="#" data-content="interests" class="icon-truck tab">Favorites</a></li>
@@ -72,11 +71,17 @@
       <div class='main'>
           <div class="row">
             <section id="aboutContact" class="hide-initial">
-              <div id="about" class="about col-sm-6">
+              <div id="about" class="about col-sm-7">
                 <h2>About</h2>
+                  <section>
+                    <!-- This will need to be modified/bolstered. In general routing should be added to make the site feel more robust. -->
+                    <p>Former geologist, organic vegetable farmer, and aspiring web developer. Look around the site to see what I've been working on.
+                  </section>
               </div>
               <div id="contact" class="contact col-sm-4">
                 <h2>Contact</h2>
+                  <li>(610)247-6750</li>
+                  <li><a href="mailto:bini.aaron@gmail.com">bini.aaron@gmail.com</a></li>
               </div>
             </section>
           </div>
@@ -95,8 +100,14 @@
           </div>
           <div id="hobbies" class="row tab-content hobbies">
             <h2>Hobbies</h2>
-            <div class="hobbies-sub col-md-5">Rock Climbing</div>
-            <div class="hobbies-sub col-md-5">Gardening</div>
+            <div class="hobbies-sub col-md-6">
+              <h3>Rock Climbing</h3>
+              <p>This is basically my favorite thing. If I could make a living doing this I would buy a van, head out to all of my favorite climbing spots, and live under the stars. Forever. Here is one of my favorite climbing places:<a href="https://www.mountainproject.com/v/bishop-area/106064825"> Bishop</a></p>
+            </div>
+            <div class="hobbies-sub col-md-6">
+              <h3>Gardening</h3>
+              <p>I was an organic vegetable farmer for six years. I still garden and like to dabble in seed saving/plant breeding. Here is a group doing great work in that arena:<a href="http://seedalliance.org/organic_plant_breeding"> The Organic Seed Alliance</a></p>
+            </div>
           </div>
       </div>
       <div id='treehouse' class='bottom-margin'>
