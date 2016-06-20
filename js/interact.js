@@ -1,7 +1,6 @@
 //jQuery functions for basic page interaction
 //could make these named functions at some point
 $(function(){
-  var defer = $.Deferred();
 
   $('.hamburger').on('click', function(){
     $('.hamburger').toggle(500);
@@ -30,15 +29,32 @@ $(function(){
   });
 
   $('#showStats').on('click', function () {
-    $('#showStats').hide();
+    $(this).hide();
     $('#treehouseStats').fadeIn(700);
     $('#hideStats').fadeIn(600);
   });
 
   $('#hideStats').on('click', function(){
+    $(this).hide();
     $('#treehouseStats').hide();
-    $('#hideStats').hide();
     $('#showStats').fadeIn(700);
+  });
+
+  $('#visitorStats').on('click', function(){
+    $(this).hide();
+    $('#treehouseRoute').hide();
+    $('#treehouseStats').find('label').hide();
+    $('#visitorGo').fadeIn(700);
+    $('#visitorGo').attr('href', 'http://teamtreehouse.com/' + $('#treehouseRoute').val() + '.json');
+  });
+
+  $('#visitorGo').on('click', function(){
+    $(this).hide();
+    $('#visitorGo').hide();
+    $('#visitorStats').fadeIn(700);
+    $('#treehouseRoute').fadeIn(700);
+    $('#treehouseStats').find('label').fadeIn(700);
+    $('#treehouseRoute').val('');
   });
 });
 

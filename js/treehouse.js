@@ -3,11 +3,11 @@
   var treehouse = {};
 
   var pointsArray =  [
-    {'Design': 0},
-    {'HTML': 1157},
-    {'CSS': 1779},
     {'JavaScript': 5408},
+    {'HTML': 1157},
     {'Ruby': 3},
+    {'Design': 0},
+    {'CSS': 1779},
     {'PHP': 1490},
     {'WordPress': 0},
     {'iOS': 0},
@@ -19,16 +19,37 @@
     {'Digital Literacy': 55},
     {'Game Development': 0},
     {'C#': 3},
-    {'Databases': 244}
+    {'Databases': 244},
   ];
 
-  //set up one as well for badges, accessing badge_count, and summing those in an array reduce
+  treehouse.parseTreehouse = function() {
+    var treehouseJSON = [];
+    $.getJSON('js/treehouse.json', function(data){
+      $.each(data, function(index, value){
+        treehouseJSON.push(value);
+        return treehouseJSON;
+      });
+    }).done(function(){
+      if (!localStorage.treehouseStats) {
+        localStorage.setItem('treehouseStats', JSON.stringify(treehouseJSON));
+      }
+      var courseCount = treehouseJSON[5].reduce(function(accumulator, current){
+        return accumulator + current.courses.length;
+      }, 0);
+      $('#treehouseCourses').html('<p><b><em>Courses Completed</em></b> : ' + courseCount + '</p>');
+      $('#treehouseCourses').append('<p><b><em>Badges Earned</em</b> : ' + treehouseJSON[5].length + '</p>');
+      $('#treehouseCourses').append('<p><b><em>Points Earned</em</b> : ' + treehouseJSON[6].total + '</p>');
+      //don't think i need to return courseCount here as it is only used within the function
+      return courseCount;
+    });
+  };
+  treehouse.parseTreehouse();
 
   treehouse.classifyExperience = function(obj) {
     for (var x in obj) {
-      if (obj[x] <= 500) {console.log('beginner'); return 'Beginner in: ';} else
-      if (obj[x] <= 2000) {console.log('intermediate'); return 'Intermediate in: ';} else {
-        console.log('advanced');
+      if (obj[x] == 0) {return 'notStarted';} else
+      if (obj[x] <= 500) {return 'Beginner in: ';} else
+      if (obj[x] <= 2000) {return 'Intermediate in: ';} else {
         return 'Advanced in: ';
       }
     }
@@ -36,53 +57,21 @@
 
   treehouse.assessLevel = pointsArray.reduce(function(accumulator, current) {
     var classifier = treehouse.classifyExperience(current);
-    //above function will return something like "Beginner in: "
-    if (!accumulator[classifier]) {
+    if (!accumulator[classifier] && classifier !== 'notStarted') {
       accumulator[classifier] = [];
     };
-    accumulator[classifier].push('  ' + Object.getOwnPropertyNames(current));
+    if (classifier !== 'notStarted') {
+      accumulator[classifier].push('  ' + Object.getOwnPropertyNames(current));
+    }
     return accumulator;
   }, {});
 
   treehouse.functionalAppend = function(obj) {
     for (x in obj) {
-      $('#treehouseStats').append('<p>' + x + ' ' + obj[x] + '</p>');
+      $('#treehouseStats').find('img').after('<p><b><em>' + x + '</em></b> ' + obj[x] + '</p>');
     }
   };
   treehouse.functionalAppend(treehouse.assessLevel);
-
-  // treehouse.parseTreehouse = function() {
-  //   var treehouseJSON = [];
-  //   $.getJSON('treehouse.json', function(data){
-  //     $.each(data, function(index, value){
-  //       treehouseJSON.push(value);
-  //     });
-  //   }).done(function(){
-  //     console.log(treehouseJSON[0]);
-  //     console.log(treehouseJSON[1]);
-  //     console.log(treehouseJSON[2]);
-  //     console.log(treehouseJSON[3]);
-  //     console.log(treehouseJSON[4]);
-  //     console.log(treehouseJSON[5][2].courses.length);
-  //     console.log(treehouseJSON[6]);
-  //     if (!localStorage.treehouseStats) {
-  //       localStorage.setItem('treehouseStats', JSON.stringify(treehouseJSON));
-  //     }
-  //     console.log(treehouseJSON);
-  //     return treehouseJSON;
-  //   });
-  // };
-
-  // treehouse.getMyStats = function() {
-  //   var statsArray = parseTreehouse();
-  //   var name = statsArray[0];
-  //   var badges = statsArray[5];
-  //   var points = statsArray[6];
-  //   console.log('Name: ' + name + ', Badges: ' + badges + ', Points: ' + points);
-  //   // var treehouseBadges = statsArray.map(function(element){
-  //   //   return statsArray;
-  //   // });
-  // }
 
   module.treehouse = treehouse;
 })(window);

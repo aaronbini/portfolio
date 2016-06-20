@@ -38,55 +38,55 @@ footer a {
   list-style-type: none;
 }
 
-/*.projects {
-  background-color: #00ffbf;
-  margin: 4%;
-  text-align: center;
-  height: 100px;
-}*/
-
-/*.projects:hover {
-  background-color: #00b38f;
-}*/
-
 .about {
   background-color: #ccb3ff;
-  margin: 4%;
-  text-align: center;
-  height: 200px;
+  margin: 2%;
+  padding: 10px;
+  text-align: left;
+  height: 125px;
+  /*font-size: 1.25 em;*/
   border-radius: 10px;
 }
 
+.about p {
+  font-size: 1.25 em;
+}
+
 .about:hover {
-  background-color: #b366ff;
+  background-color: #ccccff;
 }
 
 .contact {
   background-color: #ffcc99;
-  margin: 4%;
-  text-align: center;
-  height: 200px;
+  margin: 2%;
+  padding: 10px;
+  text-align: left;
+  height: 125px;
   border-radius: 10px;
 }
 
+#contact li {
+  display: inline;
+  font-size: 1.5 em;
+  margin: 10px;
+}
+
 .contact:hover {
-  background-color: #ffb366;
+  background-color: #ffddcc;
 }
 
 .interests {
   background-color: #ff9999;
   margin-top: 20px;
   margin-bottom: 20px;
-  /*padding-bottom: 20px;*/
   margin-left: 2%;
   margin-right: 2%;
   padding: 4%;
-  /*padding-top: 20px;*/
   border-radius: 10px;
 }
 
 .interests:hover {
-  background-color: #ff6666;
+  background-color: #ffb3b3;
 }
 
 .interests h2 {
@@ -130,7 +130,7 @@ footer a {
 }
 
 .hobbies:hover {
-  background-color: #ffcc66;
+  background-color: #ffe699;
 }
 
 .articleTemplate {
@@ -166,13 +166,10 @@ footer a {
   top: 0;
   right: 0;
   margin: 2%;
-  /*padding: 20px;*/
-  /*height: 60px;
-  width: 40px;*/
 }
 
 #projects {
-  background-color: #00b38f;
+  background-color: #00e6b8;
   border-radius: 10px;
   margin: 1%;
   padding: 4%;
@@ -192,6 +189,14 @@ footer a {
   background-color: transparent;
   color: black;
   font-size: 1.25em;
+}
+
+#treehouseStats p {
+  font-size: 1.25em;
+}
+
+#treehouseStats a {
+  font-size: 1.5em;
 }
 
 .my-button {

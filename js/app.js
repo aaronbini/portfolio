@@ -13,7 +13,6 @@
   Project.prototype.createHTML = function () {
     var template = Handlebars.compile($('#project-template').text());
     this.daysAgo = parseInt((new Date() - new Date(this.dateFinished))/60/60/24/1000);
-    console.log(this.daysAgo);
     this.finishStatus = (this.dateFinished !== 'not finished') ? 'finished ' + this.daysAgo + ' days ago' : '(incomplete)';
 
     return template(this);
@@ -27,10 +26,6 @@
     Project.all = rawData.map(function(element){
       return new Project(element);
     });
-
-    // rawData.forEach(function(ele) {
-    //   Project.all.push(new Project(ele));
-    // });
   };
 
   Project.fetchAll = function (viewCallback) {
@@ -41,8 +36,6 @@
       Project.loadAll(JSON.parse(localStorage.rawProjects));
       Favorite.fetchAll();
       viewCallback();
-      parseTreehouse();
-      // getMyStats();
     } else {
       var projectJSON = [];
       $.getJSON('projects.json', function(data){
@@ -54,8 +47,6 @@
         localStorage.setItem('rawProjects', JSON.stringify(Project.all));
         Favorite.fetchAll();
         viewCallback();
-        parseTreehouse();
-        // getMyStats();
       });
     }
   };
@@ -82,10 +73,6 @@
     Favorite.all = rawData.map(function(element){
       return new Favorite(element);
     });
-
-    // rawData.forEach(function(ele) {
-    //   Favorite.all.push(new Favorite(ele));
-    // });
   };
 
   Favorite.fetchAll = function () {
@@ -104,7 +91,7 @@
       });
     }
   };
-  
+
   module.Project = Project;
   module.Favorite = Favorite;
 })(window);
