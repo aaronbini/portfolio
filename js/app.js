@@ -38,7 +38,7 @@
       viewCallback();
     } else {
       var projectJSON = [];
-      $.getJSON('projects.json', function(data){
+      $.getJSON('/js/projects.json', function(data){
         $.each(data, function(index, value){
           projectJSON.push(value);
         });
@@ -81,7 +81,7 @@
       Favorite.loadAll(JSON.parse(localStorage.rawFavorites));
     } else {
       var favoriteJSON = [];
-      $.getJSON('favorites.json', function(data){
+      $.getJSON('/js/favorites.json', function(data){
         $.each(data, function(index, value){
           favoriteJSON.push(value);
         });

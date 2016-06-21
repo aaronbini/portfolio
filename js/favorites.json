@@ -86,6 +86,11 @@
 }, {
 	"title": "Treehouse",
 	"url": "http://teamtreehouse.com",
-	"description": "Good site for tutorials in many different web development areas. I've used this quite a bit as a supplement to other learning."
-}
-]
+	"description": "Good site for tutorials in many different web development areas. I've used this quite a bit as a supplement to other learning.",
+	"category": "Miscellaneous"
+}, {
+	"title": "ES6 Browser Compatibility",
+	"url": "https://kangax.github.io/compat-table/es6/",
+	"description:": "Love ES6? Want to know which browsers love it too? This site will let you know.",
+	"category": "JavaScript"
+}]
