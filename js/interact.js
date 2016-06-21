@@ -12,34 +12,6 @@ $(function(){
     $('#aboutContact').toggle(700);
   });
 
-  $('#homeNav').on('click', function(){
-    $('.tab-content').fadeIn(700);
-    $('#showAll').fadeOut(700);
-  });
-
-  $('.navigate').on('click', '.tab', function(e) {
-    $('.tab-content').hide();
-    $('#showAll').fadeIn(700);
-    $('#' + $(this).data('content')).fadeIn(700);
-  });
-
-  $('#showAll').on('click', function () {
-    $('.tab-content').fadeIn(700);
-    $('#showAll').fadeOut(700);
-  });
-
-  $('#showStats').on('click', function () {
-    $(this).hide();
-    $('#treehouseStats').fadeIn(700);
-    $('#hideStats').fadeIn(600);
-  });
-
-  $('#hideStats').on('click', function(){
-    $(this).hide();
-    $('#treehouseStats').hide();
-    $('#showStats').fadeIn(700);
-  });
-
   $('#visitorStats').on('click', function(){
     $(this).hide();
     $('#treehouseRoute').hide();
@@ -52,9 +24,9 @@ $(function(){
     $(this).hide();
     $('#visitorGo').hide();
     $('#visitorStats').fadeIn(700);
-    $('#treehouseRoute').fadeIn(700);
+    $('#treehouseRoute').val('').fadeIn(700);
     $('#treehouseStats').find('label').fadeIn(700);
-    $('#treehouseRoute').val('');
+    // $('#treehouseRoute').val('');
   });
 });
 
@@ -92,7 +64,6 @@ $(function(){
       $('#interests').append(element.toHTML());
       $('#interests').children(':not(h2, select)').hide();
     });
-    //
     pageView.populateFilter();
     pageView.handleFavoriteFilter();
   };

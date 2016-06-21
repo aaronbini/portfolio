@@ -168,6 +168,11 @@ footer a {
   margin: 2%;
 }
 
+.bacon {
+  width: 200px;
+  height: 200px;
+}
+
 #projects {
   background-color: #00e6b8;
   border-radius: 10px;
