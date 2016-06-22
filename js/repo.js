@@ -40,7 +40,7 @@
       url: 'https://api.github.com/users/aaronbini/repos',
       complete: function(message, text) {
         //this returns the Etag value, can be used for checking if we are up-to-date;
-        if (message.getResponseHeader('Etag') === localStorage.getItem('gitEtag') && localStorage.gitRepos) {
+        if (message.getResponseHeader('Etag') === localStorage.getItem('gitEtag') && localStorage.gitRepos !== undefined) {
           repos.all = JSON.parse(localStorage.getItem('gitRepos'));
           //this callback should populate the 'gitstats' div with Handlebars template filled out with repos
           callback2();
