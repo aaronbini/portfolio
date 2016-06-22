@@ -10,10 +10,21 @@
     });
   };
 
+  // $.getJSON('https://api.github.com/user/repos?access_token=' + githubToken, function(data){
+  //   repos.all = data;
+  //   localStorage.setItem('gitRepos', JSON.stringify(repos.all));
+  // })
+
   repos.requestRepos = function(callback) {
-    $.getJSON('https://api.github.com/user/repos?access_token=' + githubToken, function(data){
-      repos.all = data;
-      localStorage.setItem('gitRepos', JSON.stringify(repos.all));
+    $.ajax({
+      url: '/github/user/repos' +
+            '?per_page=50' +
+            '$sort=updated',
+      type: 'GET',
+      success: function (data, message, xhr) {
+        repos.all = data;
+        localStorage.setItem('gitRepos', JSON.stringify(repos.all));
+      }
     }).done(function(){
       //populate div with Handlebars template filled with repos
       callback();
@@ -40,6 +51,8 @@
       console.log('got it');
     });
   };
+
+  // repos.makeHeadRequest(repos.requestRepos, repoView.stickOnPage);
 
   module.repos = repos;
 })(window);
