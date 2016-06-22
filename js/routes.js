@@ -7,6 +7,7 @@ function setRouteMapping() {
   page('interests', pageController.interestsDisplay);
   page('hobbies', pageController.hobbiesDisplay);
   page('treehouse', pageController.treehouseDisplay);
+  page('gitstats', pageController.gitstatsDisplay);
   page('*', pageController.pageNotFound);
   page();
 }
@@ -18,6 +19,7 @@ function setRouteMapping() {
   var $hobbies = $('#hobbies');
   var $interests = $('#interests');
   var $treehouse = $('#treehouse');
+  var $gitstats = $('#gitstats');
 
   function showThisSection (element) {
     $('.tab-content').hide();
@@ -44,6 +46,10 @@ function setRouteMapping() {
 
   pageController.treehouseDisplay = function() {
     showThisSection($treehouse);
+  };
+
+  pageController.gitstatsDisplay = function () {
+    showThisSection($gitstats);
   };
 
   pageController.pageNotFound = function() {
