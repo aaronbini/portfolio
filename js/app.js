@@ -32,7 +32,7 @@
     //this does not check if changes have been made to projects.json
     //need to write code to check changes and then update localStorage version accordingly
     //or just get rid of local storage version and always pull in from projects.json
-    if (localStorage.rawProjects !== 'undefined' && localStorage.rawProjects !== null) {
+    if (localStorage.rawProjects /*!== 'undefined' && localStorage.rawProjects !== null*/) {
       Project.loadAll(JSON.parse(localStorage.rawProjects));
       Favorite.fetchAll();
       viewCallback();
@@ -76,7 +76,7 @@
   };
 
   Favorite.fetchAll = function () {
-    if (localStorage.rawFavorites !=='undefined' && localStorage.rawFavorites !== null) {
+    if (localStorage.rawFavorites /*!=='undefined' && localStorage.rawFavorites !== null*/) {
       //this will need to be rewritten to account for favorites that are added after initial load into localStorage
       Favorite.loadAll(JSON.parse(localStorage.rawFavorites));
     } else {

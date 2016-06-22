@@ -123,9 +123,10 @@ footer a {
 .hobbies {
   background-color: #ffdd99;
   margin: 1%;
+  margin-bottom: 20px;
   padding: 10px;
   text-align: left;
-  height: 200px;
+  /*height: 200px;*/
   border-radius: 10px;
 }
 
@@ -151,6 +152,11 @@ footer a {
 
 .bottom-margin {
   margin-bottom: 20px;
+}
+
+.main-div-margin {
+  margin: 2%;
+  padding: 10px;
 }
 
 .hide-initial {
