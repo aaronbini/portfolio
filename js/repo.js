@@ -31,13 +31,16 @@
     });
   };
 
+  var localRepos = JSON.parse(localStorage.getItem('gitRepos'));
+  console.log(localRepos.length);
+
   repos.makeHeadRequest = function (callback1, callback2) {
     $.ajax({
       type: 'HEAD',
       url: 'https://api.github.com/users/aaronbini/repos',
       complete: function(message, text) {
         //this returns the Etag value, can be used for checking if we are up-to-date;
-        if (message.getResponseHeader('Etag') === localStorage.getItem('gitEtag')) {
+        if (message.getResponseHeader('Etag') === localStorage.getItem('gitEtag') && localStorage.gitRepos) {
           repos.all = JSON.parse(localStorage.getItem('gitRepos'));
           //this callback should populate the 'gitstats' div with Handlebars template filled out with repos
           callback2();
@@ -51,8 +54,6 @@
       console.log('got it');
     });
   };
-
-  // repos.makeHeadRequest(repos.requestRepos, repoView.stickOnPage);
 
   module.repos = repos;
 })(window);
