@@ -17,8 +17,17 @@
 
   </head>
   <body>
-  <script id='treehouse-template' type='text/template'>
-
+  <script id='git-template' type='text/template'>
+    <li>
+      <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+      <p>Description: {{description}}</p>
+      <p>Language: {{language}}</p>
+      <p>Created: {{created_at}}</p>
+      <p>Last updated: {{updated_at}}</p>
+      {{#if watchers_count}}
+        <p>{{watchers_count}} watching this repo</p>
+      {{/if}}
+    </li>
   </script>
   <script id='favorite-template' type='text/template'>
     <article data-category='{{category}}' class='favorites'>
@@ -52,6 +61,7 @@
                 <li id="projectsNav"><a href="/projects" data-content="projects" class="icon-earth tab">Projects</a></li>
                 <li id="interestsNav"><a href="/interests" data-content="interests" class="icon-truck tab">Favorites</a></li>
                 <li id="hobbiesNav"><a href="/hobbies" data-content="hobbies" class="icon-mug tab">Hobbies</a></li>
+                <li id="gitstatsNav"><a href="/gitstats" data-content="gitstats" class="icon-leaf tab">Git Repos</a></li>
                 <li id="treehouseNav"><a href="/treehouse" data-content="treehouse" class="icon-sphere tab">Treehouse</a></li>
                 <li><a href="http://github.com/aaronbini" target="_blank" class="icon-github">GitHub</a></li>
               </ul>
@@ -89,13 +99,13 @@
               </select>
             </div>
           </div>
-          <div id="hobbies" class="row tab-content hobbies">
+          <div id="hobbies" class="row bottom-margin tab-content hobbies">
             <h2>Hobbies</h2>
-            <div class="hobbies-sub col-md-6">
+            <div class="hobbies-sub bottom-margin col-md-6">
               <h3>Rock Climbing</h3>
               <p>This is basically my favorite thing. If I could make a living doing this I would buy a van, head out to all of my favorite climbing spots, and live under the stars. Forever. Here is one of my favorite climbing places:<a href="https://www.mountainproject.com/v/bishop-area/106064825"> Bishop</a></p>
             </div>
-            <div class="hobbies-sub col-md-6">
+            <div class="hobbies-sub bottom-margin col-md-6">
               <h3>Gardening</h3>
               <p>I was an organic vegetable farmer for six years. I still garden and like to dabble in seed saving/plant breeding. Here is a group doing great work in that arena:<a href="http://seedalliance.org/organic_plant_breeding"> The Organic Seed Alliance</a></p>
             </div>
@@ -104,6 +114,12 @@
       <div id='notFound' class='hide-initial'>
         <h2>Does Not Compute</h2>
       </div>
+      <section id="gitstats" class='tab-content hide-initial'>
+        <h2>GitHub Repos</h2>
+        <ul>
+          <li>Recent Repos:</li>
+        </ul>
+      </section>
         <section id="treehouse" class='tab-content hide-initial bottom-margin'>
           <h3>Treehouse Stats</h3><img src='img/JS_Functions.png'>
           <div id='treehouseCourses'></div>
@@ -128,7 +144,12 @@
     <script src='js/app.js'></script>
     <script src='js/interact.js'></script>
     <script src='js/treehouse.js'></script>
+    <script src='js/githubToken.js'></script>
+    <script src='js/repo.js'></script>
+    <script src='js/repoView.js'></script>
+    <script src='js/gitController.js'></script>
     <script src='js/routes.js'></script>
     <script>Project.fetchAll(pageView.indexPageLoad);</script>
+    <script>repos.makeHeadRequest(repos.requestRepos, repoView.stickOnPage);</script>
   </body>
 </html>
