@@ -31,8 +31,8 @@
     });
   };
 
-  var localRepos = JSON.parse(localStorage.getItem('gitRepos'));
-  console.log(localRepos.length);
+  // var localRepos = JSON.parse(localStorage.getItem('gitRepos'));
+  // console.log(localRepos.length);
 
   repos.makeHeadRequest = function (callback1, callback2) {
     $.ajax({
