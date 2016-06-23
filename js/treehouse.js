@@ -90,7 +90,7 @@
 
   treehouse.functionalAppend = function(obj) {
     for (x in obj) {
-      $('#treehouseStats').find('img').after('<p><b><em>' + x + '</em></b> ' + obj[x] + '</p>');
+      $('#treehouse').find('img').after('<p><b><em>' + x + '</em></b> ' + obj[x] + '</p>');
     }
   };
   treehouse.functionalAppend(treehouse.assessLevel);
