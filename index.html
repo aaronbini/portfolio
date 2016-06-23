@@ -148,7 +148,8 @@
     <script src='js/repoView.js'></script>
     <script src='js/routes.js'></script>
     <script>Project.fetchAll(pageView.indexPageLoad);</script>
-    <script>repos.makeHeadRequest(repos.requestRepos, repoView.stickOnPage);</script>
+    <!-- <script>repos.makeHeadRequest(repos.requestRepos, repoView.stickOnPage);</script> -->
+    <script>repos.requestRepos(repoView.stickOnPage);</script>
     <!-- <script src='js/onload.js'></script> -->
   </body>
 </html>
