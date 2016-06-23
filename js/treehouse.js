@@ -22,6 +22,28 @@
     {'Databases': 244},
   ];
 
+  treehouse.showOffStats = function (array) {
+    var newArray = [];
+    array.forEach(function(element){
+      for (var x in element) {
+        if (element[x] > 0)
+          newArray.push(element);
+      }
+    });
+    return (function printStats (category) {
+      var singleCategory = newArray.filter(function(element){
+        return element[category];
+      });
+      $('#treehouseHOF').append('<p>I\'ve received<em> ' + singleCategory[0][category] + ' </em>points in <b>' + category + '</b>! Nice!</p>');
+    });
+  };
+
+  var javascript = treehouse.showOffStats(pointsArray);
+  javascript('JavaScript');
+  var php = treehouse.showOffStats(pointsArray);
+  php('PHP');
+
+
   treehouse.parseTreehouse = function() {
     var treehouseJSON = [];
     $.getJSON('js/treehouse.json', function(data){
