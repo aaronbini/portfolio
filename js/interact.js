@@ -5,7 +5,7 @@ $(function(){
   $('.hamburger').on('click', function(){
     $('.hamburger').toggle(500);
     // $('.hamburger-x').toggle(700);
-    $('.navigate').toggle(700);
+    $('.hide-initial').toggle(700);
   });
 
   $('#aboutNav').on('click', function(){

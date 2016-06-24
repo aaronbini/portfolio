@@ -13,7 +13,9 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700">
     <link rel="stylesheet" href="styles/vendor/styles/normalize.css">
     <link rel="stylesheet" href="styles/icomoon/style.css">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/module.css">
 
   </head>
   <body>
@@ -73,39 +75,39 @@
       <div class='main'>
           <div class="row">
             <section id="aboutContact" class="hide-initial">
-              <div id="about" class="about col-sm-7">
+              <div id="about" class="about-div col-sm-7">
                 <h2>About</h2>
                   <section>
                     <!-- This will need to be modified/bolstered. In general routing should be added to make the site feel more robust. -->
                     <p>Former geologist, organic vegetable farmer, and aspiring web developer. Look around the site to see what I've been working on.
                   </section>
               </div>
-              <div id="contact" class="contact col-sm-4">
+              <div id="contact" class="about-div col-sm-4">
                 <h2>Contact</h2>
                   <li>(610)247-6750</li>
                   <li><a href="mailto:bini.aaron@gmail.com">bini.aaron@gmail.com</a></li>
               </div>
             </section>
           </div>
-          <section id="projects" class="projects tab-content">
+          <section id="projects" class="main-page-div tab-content">
             <h2>Selected Projects</h2>
             <!-- include screenshot of project, needs to be done in template -->
           </section>
           <div class="row">
-            <div id="interests" class="interests tab-content">
+            <div id="interests" class="main-page-div tab-content">
               <h2>Favorite Coding Websites</h2>
               <select id="favorites-filter">
                 <option value="">-- Filter by Topic --</option>
               </select>
             </div>
           </div>
-          <div id="hobbies" class="row  tab-content hobbies">
+          <div id="hobbies" class="row tab-content main-page-div">
             <h2>Hobbies</h2>
             <div class="hobbies-sub  col-md-6">
               <h3>Rock Climbing</h3>
               <p>This is basically my favorite thing. If I could make a living doing this I would buy a van, head out to all of my favorite climbing spots, and live under the stars. Forever. Here is one of my favorite climbing places:<a href="https://www.mountainproject.com/v/bishop-area/106064825"> Bishop</a></p>
             </div>
-            <div class="hobbies-sub  col-md-6">
+            <div class="hobbies-sub col-md-6">
               <h3>Gardening</h3>
               <p>I was an organic vegetable farmer for six years. I still garden and like to dabble in seed saving/plant breeding. Here is a group doing great work in that arena:<a href="http://seedalliance.org/organic_plant_breeding"> The Organic Seed Alliance</a></p>
             </div>
@@ -114,13 +116,13 @@
       <div id='notFound' class='hide-initial'>
         <h2>Does Not Compute</h2>
       </div>
-      <section id="gitstats" class='tab-content hide-initial main-div-margin'>
+      <section id="gitstats" class='tab-content hide-initial main-div-margin main-page-div'>
         <h2>GitHub Repos</h2>
         <ul>
           <li>Recent Repos:</li>
         </ul>
       </section>
-        <section id="treehouse" class='tab-content hide-initial main-div-margin'>
+        <section id="treehouse" class='tab-content hide-initial main-div-margin main-page-div'>
           <h3>Treehouse Stats</h3><img src='img/JS_Functions.png'>
           <div id='treehouseCourses'></div>
           <div id='treehouseHOF'></div>
