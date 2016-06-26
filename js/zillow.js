@@ -5,12 +5,12 @@ zillow.datas = [];
 
 zillow.requestData = function() {
   $.ajax({
-    url: '/zillow',
+    url: '/zillow/anything',
     type: 'GET',
     // headers: { 'Authorization': 'token ' + githubToken },
     success: function(data, message, xhr) {
-      zillow.datas = data;
-      console.log(zillow.datas);
+      console.log(message);
+      console.log(xhr);
     }
   });
 };
