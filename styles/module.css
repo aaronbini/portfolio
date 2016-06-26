@@ -1,0 +1,209 @@
+.about-div {
+  margin: 2%;
+  padding: 10px;
+  text-align: left;
+  height: 125px;
+  border-radius: 10px;
+}
+
+.main-page-div {
+  margin: 2%;
+  padding: 10px;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.container {
+  width: 100%;
+}
+
+.header-color {
+  background-color: #d0d0e2;
+}
+
+.favorites {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding-bottom: 10px;
+}
+
+.favorites address {
+  margin-bottom: 5px;
+}
+
+.fav-description {
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+.hamburger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 2%;
+}
+
+.bacon {
+  width: 200px;
+  height: 200px;
+}
+
+.my-button {
+  background-color: transparent;
+  color: black;
+  font-size: 1.25em;
+  background-color: #d9d9d9;
+}
+
+.my-button:hover {
+  background-color: gray;
+}
+
+.header-nav li {
+  display: inline;
+  margin-right: 7px;
+  font-size: 2.5 em;
+}
+
+.header-nav a {
+  font-size: 1em;
+}
+
+.navigate {
+  display: none;
+}
+
+/*.no-bullet {
+  list-style-type: none;
+}*/
+
+#about {
+  background-color: #ccb3ff;
+}
+
+#about p {
+  font-size: 1.25 em;
+}
+
+#about:hover {
+  background-color: #ccccff;
+}
+
+#contact {
+  background-color: #ffcc99;
+}
+
+#contact li {
+  display: inline;
+  font-size: 1.5 em;
+  margin: 10px;
+}
+
+#contact:hover {
+  background-color: #ffddcc;
+}
+
+#interests {
+  background-color: #ff9999;
+}
+
+#interests:hover {
+  background-color: #ffb3b3;
+}
+
+#interests h2 {
+  display: inline-block;
+  margin-bottom: 40px;
+  margin-right: 40px;
+  width: 50%;
+}
+
+#interests select {
+  -webkit-appearance: menulist-button;
+  padding-bottom: 50px;
+  height: 40px;
+  line-height: 40px;
+  width: 200px;
+  top: 0px;
+}
+
+#projects {
+  background-color: #00e6b8;
+}
+
+#projects:hover {
+  background-color: #00ffbf;
+}
+
+#hobbies {
+  background-color: #ffdd99;
+}
+
+#hobbies:hover {
+  background-color: #ffe699;
+}
+
+#treehouseStats h3 {
+  display: inline;
+  margin-right: 10px;
+}
+
+#showAll {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2%;
+  margin-top: 60px;
+  background-color: transparent;
+  color: black;
+  font-size: 1.25em;
+}
+
+#treehouseStats p {
+  font-size: 1.25em;
+}
+
+#treehouseStats a {
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 450px), handheld and (orientation: landscape) {
+
+  .hamburger {
+    display: none;
+  }
+
+  .navigate {
+    display: inline;
+  }
+
+  .header-name {
+    width: 35%;
+    margin-right: 0;
+    float: left;
+  }
+
+  .header-name h1 {
+    width: 100%;
+    margin-right: 0px;
+    font-size: 3em;
+  }
+
+  .header-nav {
+    display: inline;
+    width: 65%;
+    margin-left: 0;
+    margin-top: 40px;
+    float: right;
+  }
+
+  .header-nav li {
+    display: inline;
+    margin-right: 15px;
+  }
+
+  .header-nav a {
+    font-size: 1.25em;
+  }
+
+}

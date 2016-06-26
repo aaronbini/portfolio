@@ -1,0 +1,27 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #e6f2ff;
+}
+
+img, video, canvas {
+  max-width: 100%;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+h1, h2, h3, h4, button {
+  font-family: 'Raleway', sans-serif;
+}
+
+footer {
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+footer a {
+  float: right;
+  margin-right: 5%;
+}
