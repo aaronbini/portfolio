@@ -24,4 +24,4 @@ zillow.requestData = function() {
   });
 };
 
-// zillow.requestData();
+zillow.requestData();
