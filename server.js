@@ -11,7 +11,16 @@ var proxyGitHub = function(request, response) {
   }))(request, response);
 };
 
+var proxyZillow = function(request, response) {
+  (requestProxy({
+    url: 'http://www.zillow.com/webservice/GetRegionChildren.htm?zws_id=' + process.env.ZILLOW_TOKEN + '&state=OR&childtype=county',
+    headers: { Authorization: 'token ' + process.env.GITHUB_TOKEN }
+  }))(request, response);
+};
+
 app.get('/github/*', proxyGitHub);
+
+app.get('/zillow/*', proxyZillow);
 
 app.use(express.static('./'));
 

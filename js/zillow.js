@@ -5,7 +5,7 @@ zillow.datas = [];
 
 zillow.requestData = function() {
   $.ajax({
-    url: ' https://www.zillow.com/webservice/GetRegionChildren.htm?zws_id=' + zillow.id + '&state=' + zillow.state + '&childtype=county',
+    url: 'https://www.zillow.com/webservice/GetRegionChildren.htm?zws_id=' + zillow.id + '&state=' + zillow.state + '&childtype=county',
     type: 'GET',
     // headers: { 'Authorization': 'token ' + githubToken },
     success: function(data, message, xhr) {
