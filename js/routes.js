@@ -8,7 +8,6 @@ function setRouteMapping() {
   page('hobbies', pageController.hobbiesDisplay);
   page('treehouse', pageController.treehouseDisplay);
   page('gitstats', pageController.gitstatsDisplay);
-  // page('gitstats/:filter', repos.stickOnRecent, pageController.gitstatsDisplay);
   page('zillow', zillow.requestData);
   page('*', pageController.pageNotFound);
   page();

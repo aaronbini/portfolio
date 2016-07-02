@@ -4,7 +4,6 @@ $(function(){
 
   $('.hamburger').on('click', function(){
     $('.hamburger').toggle(500);
-    // $('.hamburger-x').toggle(700);
     $('.hide-initial').toggle(700);
   });
 
@@ -26,7 +25,6 @@ $(function(){
     $('#visitorStats').fadeIn(700);
     $('#treehouseRoute').val('').fadeIn(700);
     $('#treehouseStats').find('label').fadeIn(700);
-    // $('#treehouseRoute').val('');
   });
 });
 

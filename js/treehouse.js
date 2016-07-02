@@ -46,7 +46,7 @@
 
   treehouse.parseTreehouse = function() {
     var treehouseJSON = [];
-    $.getJSON('js/treehouse.json', function(data){
+    $.getJSON('data/treehouse.json', function(data){
       $.each(data, function(index, value){
         treehouseJSON.push(value);
         return treehouseJSON;

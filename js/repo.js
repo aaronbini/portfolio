@@ -3,17 +3,12 @@
 
   repos.all = [];
 
-  //filters a particular reppo[attr] on a RegExp, in this case class because I want to get rid of all repos that contains the string 'class'
+  //filters a particular reppo[attr] on a RegExp, in this case class because I want to get rid of all repos that contains the strings 'class' and 'lab'
   repos.filterTime = function(attr) {
     return repos.all.filter(function(repo) {
       if (repo[attr].search(/lab/) == -1 && repo[attr].search(/class/) == -1) {return true;}
     });
   };
-
-  // $.getJSON('https://api.github.com/user/repos?access_token=' + githubToken, function(data){
-  //   repos.all = data;
-  //   localStorage.setItem('gitRepos', JSON.stringify(repos.all));
-  // })
 
   repos.requestRepos = function(callback) {
     $.ajax({
@@ -23,16 +18,13 @@
       type: 'GET',
       success: function (data, message, xhr) {
         repos.all = data;
-        localStorage.setItem('gitRepos', JSON.stringify(repos.all));
+        localStorage.setItem('gitRepos', JSON.stringify(data));
       }
     }).done(function(){
       //populate div with Handlebars template filled with repos
       callback();
     });
   };
-
-  // var localRepos = JSON.parse(localStorage.getItem('gitRepos'));
-  // console.log(localRepos.length);
 
   repos.makeHeadRequest = function (callback1, callback2) {
     $.ajax({
@@ -45,15 +37,12 @@
             repos.all = JSON.parse(localStorage.getItem('gitRepos'));
             //this callback should populate the 'gitstats' div with Handlebars template filled out with repos
             callback2();
-            //return;
           }
         } else {
           localStorage.setItem('gitEtag', message.getResponseHeader('Etag'));
           callback1(callback2);
         }
       }
-    }).done(function() {
-      console.log('got it');
     });
   };
 
