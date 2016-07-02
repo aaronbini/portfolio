@@ -8,8 +8,6 @@ function setRouteMapping() {
   page('hobbies', pageController.hobbiesDisplay);
   page('treehouse', pageController.treehouseDisplay);
   page('gitstats', pageController.gitstatsDisplay);
-  // page('gitstats/:filter', repos.stickOnRecent, pageController.gitstatsDisplay);
-  page('zillow', zillow.requestData);
   page('*', pageController.pageNotFound);
   page();
 }
@@ -29,13 +27,11 @@ function setRouteMapping() {
   }
 
   pageController.homeDisplay = function() {
-    $('#showAll').hide();
     $('.tab-content').fadeIn(700);
   };
 
   pageController.projectsDisplay = function () {
     showThisSection($projects);
-    console.log('projects');
   };
 
   pageController.interestsDisplay = function () {

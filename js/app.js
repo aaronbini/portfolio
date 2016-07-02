@@ -29,16 +29,13 @@
   };
 
   Project.fetchAll = function (viewCallback) {
-    //this does not check if changes have been made to projects.json
-    //need to write code to check changes and then update localStorage version accordingly
-    //or just get rid of local storage version and always pull in from projects.json
     if (localStorage.rawProjects /*!== 'undefined' && localStorage.rawProjects !== null*/) {
       Project.loadAll(JSON.parse(localStorage.rawProjects));
       Favorite.fetchAll();
       viewCallback();
     } else {
       var projectJSON = [];
-      $.getJSON('/js/projects.json', function(data){
+      $.getJSON('/data/projects.json', function(data){
         $.each(data, function(index, value){
           projectJSON.push(value);
         });
@@ -76,12 +73,12 @@
   };
 
   Favorite.fetchAll = function () {
-    if (localStorage.rawFavorites /*!=='undefined' && localStorage.rawFavorites !== null*/) {
+    if (localStorage.rawFavorites) {
       //this will need to be rewritten to account for favorites that are added after initial load into localStorage
       Favorite.loadAll(JSON.parse(localStorage.rawFavorites));
     } else {
       var favoriteJSON = [];
-      $.getJSON('/js/favorites.json', function(data){
+      $.getJSON('/data/favorites.json', function(data){
         $.each(data, function(index, value){
           favoriteJSON.push(value);
         });
