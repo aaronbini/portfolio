@@ -1,13 +1,16 @@
 {
-  "name": "mvc-blog",
+  "name": "Aaron Bini Portfolio",
   "version": "1.0.0",
-  "description": "As we now complete our MVC conversation, we can refactor our app to use good MVC separation of concerns.",
+  "description": "Portfolio site to highlight some completed and ongoing projects.",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Code Fellows",
+  "engines": {
+    "node": "6.3.1"
+  },
+  "author": "Aaron Bini",
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
