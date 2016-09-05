@@ -29,11 +29,7 @@
   };
 
   Project.fetchAll = function (viewCallback) {
-    // if (localStorage.rawProjects /*!== 'undefined' && localStorage.rawProjects !== null*/) {
-    //   Project.loadAll(JSON.parse(localStorage.rawProjects));
-    //   Favorite.fetchAll();
-    //   viewCallback();
-    // } else {
+
     var projectJSON = [];
     $.getJSON('/data/projects.json', function(data){
       $.each(data, function(index, value){
@@ -41,53 +37,11 @@
       });
     }).done(function(){
       Project.loadAll(projectJSON);
-      localStorage.setItem('rawProjects', JSON.stringify(Project.all));
-      Favorite.fetchAll();
       viewCallback();
     });
   };
 
-  function Favorite (obj) {
-    this.title = obj.title;
-    this.url = obj.url;
-    this.description = obj.description;
-    this.category = obj.category;
-  };
-
-  Favorite.all = [];
-
-  Favorite.prototype.toHTML = function () {
-    var template = Handlebars.compile($('#favorite-template').text());
-    return template(this);
-  };
-
-  Favorite.loadAll = function(rawData) {
-    rawData.sort(function(a,b) {
-      return (new Date(b.dateFinished)) - (new Date(a.dateFinished));
-    });
-
-    Favorite.all = rawData.map(function(element){
-      return new Favorite(element);
-    });
-  };
-
-  Favorite.fetchAll = function () {
-    if (localStorage.rawFavorites) {
-      //this will need to be rewritten to account for favorites that are added after initial load into localStorage
-      Favorite.loadAll(JSON.parse(localStorage.rawFavorites));
-    } else {
-      var favoriteJSON = [];
-      $.getJSON('/data/favorites.json', function(data){
-        $.each(data, function(index, value){
-          favoriteJSON.push(value);
-        });
-      }).done(function(){
-        Favorite.loadAll(favoriteJSON);
-        localStorage.setItem('rawFavorites', JSON.stringify(Favorite.all));
-      });
-    }
-  };
+  Project.fetchAll(pageView.indexPageLoad);
 
   module.Project = Project;
-  module.Favorite = Favorite;
 })(window);

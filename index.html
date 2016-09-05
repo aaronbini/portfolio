@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   	<!-- Optional theme -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-  	<!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700">
     <link rel="stylesheet" href="styles/vendor/styles/normalize.css">
     <link rel="stylesheet" href="styles/icomoon/style.css">
@@ -19,25 +18,7 @@
 
   </head>
   <body>
-  <script id='git-template' type='text/template'>
-    <li>
-      <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
-      <p>Description: {{description}}</p>
-      <p>Language: {{language}}</p>
-      <p>Created: {{created_at}}</p>
-      <p>Last updated: {{updated_at}}</p>
-      {{#if watchers_count}}
-        <p>{{watchers_count}} watching this repo</p>
-      {{/if}}
-    </li>
-  </script>
-  <script id='favorite-template' type='text/template'>
-    <article data-category='{{category}}' class='favorites'>
-      <h3>{{title}}</h3>
-      <address><a href='{{url}}'>Visit Site</a></address>
-      <section class='fav-description'>{{description}}</section>
-    </article>
-  </script>
+
   <script id="project-template" type="text/template">
     <article data-category="{{category}}">
       <h3>{{title}}</h3>
@@ -50,59 +31,53 @@
       <section class="description">{{description}}</section>
     </article>
   </script>
+
     <div id="top" class="container">
         <div class="row header-color">
-          <input type="image" class='hamburger' src='img/hamburger.svg'/>
           <div class="col-md-6 header-name">
             <h1 class="header">Aaron Bini</h1>
           </div>
           <div class="col-md-6 header-nav">
             <nav class="navigate">
-              <ul class="list-unstyled">
-                <li id="homeNav" data-content="home"><a href="/" class="icon-home">Home</a></li>
-                <li id="aboutNav" data-content="about"><a href="#" class="icon-leaf">About</a></li>
-                <li id="projectsNav"><a href="/projects" data-content="projects" class="icon-earth tab">Projects</a></li>
-                <li id="interestsNav"><a href="/interests" data-content="interests" class="icon-truck tab">Favorites</a></li>
-                <li id="hobbiesNav"><a href="/hobbies" data-content="hobbies" class="icon-mug tab">Hobbies</a></li>
-                <li id="gitstatsNav"><a href="/gitstats" data-content="gitstats" class="icon-leaf tab">Git Repos</a></li>
-                <li id="treehouseNav"><a href="/treehouse" data-content="treehouse" class="icon-sphere tab">Treehouse</a></li>
-                <li><a href="http://github.com/aaronbini" target="_blank" class="icon-github">GitHub</a></li>
+              <ul id="navBar">
+                <!-- class="icon-home" class="icon-leaf" class="icon-earth" class="icon-mug" class="icon-github"-->
+                <li data-content="home"><a class="homeNav" href="/" >Home</a></li>
+                <li id="aboutNav" data-content="about"><a class="homeNav" href="/about" >About</a></li>
+                <li id="projectsNav"><a href="/projects" data-content="projects"  class="homeNav">Projects</a></li>
+                <li id="hobbiesNav"><a href="/hobbies" data-content="hobbies" class="homeNav">Hobbies</a></li>
+                <li><a href="http://github.com/aaronbini" target="_blank" class="homeNav">GitHub</a></li>
               </ul>
             </nav>
           </div>
         </div>
       <div class='main'>
           <div class="row">
-            <section id="aboutContact" class="hide-initial">
+            <section id="aboutContact" class="tab-content">
               <div id="about" class="about-div col-sm-7">
                 <h2>About</h2>
                   <section>
-                    <!-- This will need to be modified/bolstered. In general routing should be added to make the site feel more robust. -->
-                    <p>Former geologist, organic vegetable farmer, and aspiring web developer. Look around the site to see what I've been working on.
+                    <p>Former glacial geologist, organic vegetable farmer, and Full-Stack JavaScript developer. I love writing DRY JavaScript code, and enjoy working with Angular on the front-end and NodeJS on the back-end.</p>
                   </section>
               </div>
               <div id="contact" class="about-div col-sm-4">
                 <h2>Contact</h2>
-                  <li>(610)247-6750</li>
-                  <li><a href="mailto:bini.aaron@gmail.com">bini.aaron@gmail.com</a></li>
+                  <ul>
+                    <li>(610)247-6750</li>
+                    <li><a href="mailto:bini.aaron@gmail.com">bini.aaron@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/aaron-bini-9711a965">LinkedIn</a></li>
+                  </ul>
               </div>
             </section>
           </div>
+
           <section id="projects" class="main-page-div tab-content">
             <h2>Selected Projects</h2>
             <!-- include screenshot of project, needs to be done in template -->
           </section>
-          <div class="row">
-            <div id="interests" class="main-page-div tab-content">
-              <h2>Favorite Coding Websites</h2>
-              <select id="favorites-filter">
-                <option value="">-- Filter by Topic --</option>
-              </select>
-            </div>
-          </div>
+
           <div id="hobbies" class="row tab-content main-page-div">
             <h2>Hobbies</h2>
-            <div class="hobbies-sub  col-md-6">
+            <div class="hobbies-sub col-md-6">
               <h3>Rock Climbing</h3>
               <p>This is basically my favorite thing. Here is one of my favorite climbing places:<a href="https://www.mountainproject.com/v/bishop-area/106064825"> Bishop</a></p>
             </div>
@@ -112,28 +87,13 @@
             </div>
           </div>
       </div>
-      <div id='notFound' class='hide-initial'>
-        <h2>Does Not Compute</h2>
-      </div>
-      <section id="gitstats" class='tab-content hide-initial main-div-margin main-page-div'>
-        <h2>GitHub Repos</h2>
-        <ul>
-          <li>Recent Repos:</li>
-        </ul>
-      </section>
-        <section id="treehouse" class='tab-content hide-initial main-div-margin main-page-div'>
-          <h3>Treehouse Stats</h3><img src='img/JS_Functions.png'>
-          <div id='treehouseCourses'></div>
-          <div id='treehouseHOF'></div>
-          <h4>Want to see your Treehouse .json file? Enter your Treehouse username here and click Submit</h4>
-          <h4>I would also recommend downloading the Chrome plugin JSONView for better viewing</h4>
-          <label for='treehouseRoute'>Your Treehouse username: </label>
-          <input type='text' id='treehouseRoute'><button id='visitorStats' class="btn my-button">Submit</button>
-          <a id='visitorGo' class='hide-initial'>View My JSON!</a>
-        </section>
+
+      <div id='notFound' class="tab-content main-page-div hide-initial"></div>
+      <div id="dummy"></div>
+
     </div>
     <footer>
-      &copy; 2016 Aaron Bini | Just Keep Coding   <a href="#top" class="icon-home "> Back to top></a>
+      &copy; 2016 Aaron Bini | Just Keep Coding
     </footer>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
@@ -141,15 +101,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js'></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-    <!-- <script src='js/projects.js'></script>
-    <script src='js/favorites.js'></script> -->
-    <script src='js/app.js'></script>
     <script src='js/interact.js'></script>
-    <script src='js/treehouse.js'></script>
-    <script src='js/repo.js'></script>
-    <script src='js/repoView.js'></script>
+    <script src='js/app.js'></script>
     <script src='js/routes.js'></script>
-    <script>Project.fetchAll(pageView.indexPageLoad);</script>
-    <script>repos.requestRepos(repoView.stickOnPage);</script>
   </body>
 </html>

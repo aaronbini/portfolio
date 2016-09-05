@@ -3,11 +3,9 @@ function setRouteMapping() {
   page.base('/');
 
   page('', pageController.homeDisplay);
+  page('about', pageController.aboutDisplay);
   page('projects', pageController.projectsDisplay);
-  page('interests', pageController.interestsDisplay);
   page('hobbies', pageController.hobbiesDisplay);
-  page('treehouse', pageController.treehouseDisplay);
-  page('gitstats', pageController.gitstatsDisplay);
   page('*', pageController.pageNotFound);
   page();
 }
@@ -15,49 +13,48 @@ function setRouteMapping() {
 (function(module) {
   var pageController = {};
 
+  var $aboutContact = $('#aboutContact');
   var $projects = $('#projects');
   var $hobbies = $('#hobbies');
-  var $interests = $('#interests');
-  var $treehouse = $('#treehouse');
-  var $gitstats = $('#gitstats');
+  var $notFound = $('#notFound');
+  var $dummyDiv = $('#dummy');
 
-  function showThisSection (element) {
+  function doNothing () {};
+
+  function showThisSection (element, callback, element2) {
     $('.tab-content').hide();
-    element.fadeIn(700);
+    element2.empty();
+    callback();
+    element.fadeIn(500);
   }
 
   pageController.homeDisplay = function() {
-    $('.tab-content').fadeIn(700);
+    $('.tab-content').fadeIn(500);
+    $('#notFound').empty();
+  };
+
+  pageController.aboutDisplay = function () {
+    showThisSection($aboutContact, doNothing, $notFound);
   };
 
   pageController.projectsDisplay = function () {
-    showThisSection($projects);
-  };
-
-  pageController.interestsDisplay = function () {
-    showThisSection($interests);
+    showThisSection($projects, doNothing, $notFound);
   };
 
   pageController.hobbiesDisplay = function() {
-    showThisSection($hobbies);
-  };
-
-  pageController.treehouseDisplay = function() {
-    showThisSection($treehouse);
-  };
-
-  pageController.gitstatsDisplay = function () {
-    showThisSection($gitstats);
+    showThisSection($hobbies, doNothing, $notFound);
   };
 
   pageController.pageNotFound = function() {
-    $('.tab-content').hide();
-    $('#notFound').append('<h4>404 Error!</h4><p>The page at "'
-      + location.hostname + location.pathname + location.search
-      + '" can\'t be found. Were you looking for bacon again? None here my friend. Why don\'t you just head back to my home page?!</p>'
-      + '<img class=bacon src="img/bacon.gif"></img'
-    );
-    $('#notFound').fadeIn(700);
+    function appendMessage () {
+      $notFound.append('<h2>Does Not Compute</h2>'
+        + '<h4>404 Error!</h4><p>The page at "'
+        + location.hostname + location.pathname + location.search
+        + '" can\'t be found. Were you looking for bacon again? None here my friend. Why don\'t you just head back to my home page?!</p>'
+        + '<img class=bacon src="img/bacon.gif"></img'
+      );
+    };
+    showThisSection($notFound, appendMessage, $notFound);
   };
 
   module.pageController = pageController;

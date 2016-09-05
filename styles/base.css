@@ -1,6 +1,18 @@
 body {
   font-family: 'Ubuntu', sans-serif;
-  background-color: #e6f2ff;
+  /*background-color: #e6f2ff;*/
+  /*background-color: #d0d0e2;*/
+  background-color: gainsboro;
+  font-size: 1.7rem;
+}
+
+nav ul {
+  list-style-type: circle;
+}
+
+nav li {
+  font-family: 'Ubuntu', sans-serif;
+  display: list-item;
 }
 
 img, video, canvas {
