@@ -29,23 +29,22 @@
   };
 
   Project.fetchAll = function (viewCallback) {
-    if (localStorage.rawProjects /*!== 'undefined' && localStorage.rawProjects !== null*/) {
-      Project.loadAll(JSON.parse(localStorage.rawProjects));
+    // if (localStorage.rawProjects /*!== 'undefined' && localStorage.rawProjects !== null*/) {
+    //   Project.loadAll(JSON.parse(localStorage.rawProjects));
+    //   Favorite.fetchAll();
+    //   viewCallback();
+    // } else {
+    var projectJSON = [];
+    $.getJSON('/data/projects.json', function(data){
+      $.each(data, function(index, value){
+        projectJSON.push(value);
+      });
+    }).done(function(){
+      Project.loadAll(projectJSON);
+      localStorage.setItem('rawProjects', JSON.stringify(Project.all));
       Favorite.fetchAll();
       viewCallback();
-    } else {
-      var projectJSON = [];
-      $.getJSON('/data/projects.json', function(data){
-        $.each(data, function(index, value){
-          projectJSON.push(value);
-        });
-      }).done(function(){
-        Project.loadAll(projectJSON);
-        localStorage.setItem('rawProjects', JSON.stringify(Project.all));
-        Favorite.fetchAll();
-        viewCallback();
-      });
-    }
+    });
   };
 
   function Favorite (obj) {
