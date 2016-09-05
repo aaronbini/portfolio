@@ -2,7 +2,7 @@ function setRouteMapping() {
 
   page.base('/');
 
-  page('', pageController.homeDisplay);
+  page('/', pageController.homeDisplay);
   page('about', pageController.aboutDisplay);
   page('projects', pageController.projectsDisplay);
   page('hobbies', pageController.hobbiesDisplay);
