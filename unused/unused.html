@@ -1,0 +1,51 @@
+<script id='git-template' type='text/template'>
+  <li>
+    <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+    <p>Description: {{description}}</p>
+    <p>Language: {{language}}</p>
+    <p>Created: {{created_at}}</p>
+    <p>Last updated: {{updated_at}}</p>
+    {{#if watchers_count}}
+      <p>{{watchers_count}} watching this repo</p>
+    {{/if}}
+  </li>
+</script>
+<script id='favorite-template' type='text/template'>
+  <article data-category='{{category}}' class='favorites'>
+    <h3>{{title}}</h3>
+    <address><a href='{{url}}'>Visit Site</a></address>
+    <section class='fav-description'>{{description}}</section>
+  </article>
+</script>
+
+
+<div class="row">
+  <div id="interests" class="main-page-div tab-content">
+    <h2>Favorite Coding Websites</h2>
+    <select id="favorites-filter">
+      <option value="">-- Filter by Topic --</option>
+    </select>
+  </div>
+</div>
+
+<section id="gitstats" class='tab-content hide-initial main-div-margin main-page-div'>
+  <h2>GitHub Repos</h2>
+  <ul>
+    <li>Recent Repos:</li>
+  </ul>
+</section>
+
+<section id="treehouse" class='tab-content hide-initial main-div-margin main-page-div'>
+  <h3>Treehouse Stats</h3><img src='img/JS_Functions.png'>
+  <div id='treehouseCourses'></div>
+  <div id='treehouseHOF'></div>
+  <h4>Want to see your Treehouse .json file? Enter your Treehouse username here and click Submit</h4>
+  <h4>I would also recommend downloading the Chrome plugin JSONView for better viewing</h4>
+  <label for='treehouseRoute'>Your Treehouse username: </label>
+  <input type='text' id='treehouseRoute'><button id='visitorStats' class="btn my-button">Submit</button>
+  <a id='visitorGo' class='hide-initial'>View My JSON!</a>
+</section>
+
+<input type="image" class='hamburger' src='img/hamburger.svg'/>
+
+<a href="/" class="icon-home"> Back to top></a>
