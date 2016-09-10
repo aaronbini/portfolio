@@ -29,8 +29,10 @@ h1, h2, h3, h4, button {
 }
 
 footer {
-  margin-bottom: 20px;
-  margin-left: 10px;
+  background-color: lightgray;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-top: 20px;
 }
 
 footer a {
