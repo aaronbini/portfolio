@@ -31,12 +31,18 @@
 	"sourceCode": "https://github.com/aaronbini/ProjectsManager",
 	"category": "Vanilla Javascript, HTML5, CSS3"
 }, {
+	"title": "Job Hunter App",
+	"dateFinished": "not finished",
+	"description": "This app is designed to help users who are in the process of job hunting. It allows users to keep track of what jobs they applied for and when, as well as keep detailed records about the companies they are interested in, and contacts they have made during the job hunting process.",
+	"sourceCode": "https://github.com/InsertCleverNameHere",
+	"category": "The MEAN Stack: MongoDB, Express, AngularJS, Node.js"
+}, {
 	"title": "Blood Pressure Tracker",
 	"dateFinished": "not finished",
 	"url": "notLive",
 	"description": "This incomplete project will be a simple application that uses the MEAN stack in order to allow users to keep track of their daily Blood Pressure reading. This page is built with Javascript, Angular, HTML5, CSS3 and SCSS on the front-end, and uses Chart.js to allow user to view the history of their readings in chart form. The back-end utilizes NodeJS, Express, and MongoDB for persistent data. User authorization is controlled in Angular on the front-end, and by using Express middleware on the back-end.",
 	"sourceCode": "https://github.com/aaronbini/bpTracker",
-	"category": "The MEAN Stack: MongoDB, Express, Angular, NodeJS"
+	"category": "The MEAN Stack: MongoDB, Express, AngularJS, Node.js"
 }, {
 	"title": "PDX Farm Finder",
 	"dateFinished": "not finished",
