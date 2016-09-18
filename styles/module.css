@@ -17,29 +17,7 @@
 }
 
 .header-color {
-  background-color: lightgray;
-}
-
-.favorites {
-  margin-bottom: 15px;
-  margin-top: 15px;
-  padding-bottom: 10px;
-}
-
-.favorites address {
-  margin-bottom: 5px;
-}
-
-.fav-description {
-  margin-top: 5px;
-  padding-top: 5px;
-}
-
-.hamburger {
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin: 2%;
+  background-color: #78909c;
 }
 
 .bacon {
@@ -73,7 +51,21 @@
 }
 
 .homeNav {
-  color: royalblue;
+  color: lightgray;
+}
+
+.main-div-color {
+  /*background-color: lightsteelblue;*/
+  /*background-color: #c2f0f0;*/
+  background-color: #78909c;
+}
+
+.main-div-color a {
+  color: lightgray;
+}
+
+.main-div-color a:hover {
+  color: #23527c;
 }
 
 #navBar {
@@ -85,16 +77,9 @@
   list-style: circle;
 }
 
-#about {
-  background-color: #ffcc99;
-}
 
 #about p {
   font-size: 1.5 em;
-}
-
-#contact {
-  background-color: #ffcc99;
 }
 
 #contact li {
@@ -106,16 +91,12 @@
 #aboutContact div {
   min-height: 170px;
   margin: 2%;
-  /*padding: 5px;*/
   text-align: left;
 }
 
-#projects {
-  background-color: #00e6b8;
-}
-
-#hobbies {
-  background-color: #ffdd99;
+#top {
+  /* flex: 1; would be enough but it looks bad in IE */
+  flex: 1 0 auto;
 }
 
 @media screen and (min-width: 450px), handheld and (orientation: landscape) {

@@ -1,5 +1,13 @@
 [
 	{
+		"title": "Clever Job Hunter",
+		"dateFinished": "2016-09-16",
+		"url": "http://insertclevernamehere.herokuapp.com/#/",
+		"description": "This application assists users who are actively engaged in job hunting. Users can store information about positions they've applied for, companies they've researched, and contacts they've made in the process. The application was built by a team of five over the course of one week, and was developed using the MEAN Stack. I developed the back-end user routing and stat tracking. On the front-end I contributed significantly on the Angular component architecture.",
+		"sourceCode": "https://github.com/InsertCleverNameHere",
+		"category": "MongoDB, ExpressJS, AngularJS, Node.js: The MEAN Stack"
+	},
+	{
 		"title": "He Really Said That",
 		"dateFinished": "2016-09-02",
 		"url": "http://www.he-really-said-that.com/",
@@ -34,14 +42,14 @@
 	"title": "Blood Pressure Tracker",
 	"dateFinished": "not finished",
 	"url": "notLive",
-	"description": "This incomplete project will be a simple application that uses the MEAN stack in order to allow users to keep track of their daily Blood Pressure reading. This page is built with Javascript, Angular, HTML5, CSS3 and SCSS on the front-end, and uses Chart.js to allow user to view the history of their readings in chart form. The back-end utilizes NodeJS, Express, and MongoDB for persistent data. User authorization is controlled in Angular on the front-end, and by using Express middleware on the back-end.",
+	"description": "This in-progress project will be a simple application that uses the MEAN stack in order to allow users to keep track of their daily Blood Pressure reading. This page is built with Javascript, Angular, HTML5, CSS3 and SCSS on the front-end, and uses Chart.js to allow user to view the history of their readings in chart form. The back-end utilizes NodeJS, Express, and MongoDB for persistent data. User authorization is controlled in Angular on the front-end, and by using Express middleware on the back-end.",
 	"sourceCode": "https://github.com/aaronbini/bpTracker",
-	"category": "The MEAN Stack: MongoDB, Express, Angular, NodeJS"
+	"category": "The MEAN Stack: MongoDB, Express, AngularJS, Node.js"
 }, {
 	"title": "PDX Farm Finder",
 	"dateFinished": "not finished",
 	"url": "notLive",
-	"description": "This incomplete project will allow users to search for farms in the Portland area by proximity as well as by what the farm grows and sells. This project is built with PHP, a MySQL database, Javascript, HTML, and CSS. The project utilizes the Google Maps API in order to add map search functionality to the page.",
+	"description": "This in-progress project will allow users to search for farms in the Portland area by proximity as well as by what the farm grows and sells. This project is built with PHP, a MySQL database, Javascript, HTML, and CSS. The project utilizes the Google Maps API in order to add map search functionality to the page.",
 	"sourceCode": "https://github.com/aaronbini/farm_finder",
 	"category": "PHP, JavaScript, HTML5, CSS3"
 }
