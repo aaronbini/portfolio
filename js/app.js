@@ -13,7 +13,7 @@
   Project.prototype.createHTML = function () {
     var template = Handlebars.compile($('#project-template').text());
     this.daysAgo = parseInt((new Date() - new Date(this.dateFinished))/60/60/24/1000);
-    this.finishStatus = (this.dateFinished !== 'not finished') ? 'finished ' + this.daysAgo + ' days ago' : '(in-progress)';
+    this.finishStatus = (this.dateFinished !== 'not finished') ? 'Finished ' + this.daysAgo + ' days ago' : '(in-progress)';
 
     return template(this);
   };

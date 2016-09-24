@@ -17,7 +17,7 @@
 }
 
 .header-color {
-  background-color: #78909c;
+  background-color: darkseagreen;
 }
 
 .bacon {
@@ -51,21 +51,23 @@
 }
 
 .homeNav {
-  color: lightgray;
+  color: saddlebrown;
 }
 
 .main-div-color {
-  /*background-color: lightsteelblue;*/
-  /*background-color: #c2f0f0;*/
-  background-color: #78909c;
+  background-color: darkseagreen;
 }
 
 .main-div-color a {
-  color: lightgray;
+  color: saddlebrown;
 }
 
 .main-div-color a:hover {
   color: #23527c;
+}
+
+.description {
+  margin-bottom: 10px;
 }
 
 #navBar {
