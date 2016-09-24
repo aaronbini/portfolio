@@ -3,54 +3,54 @@
 		"title": "Clever Job Hunter",
 		"dateFinished": "2016-09-16",
 		"url": "http://insertclevernamehere.herokuapp.com/#/",
-		"description": "This application assists users who are actively engaged in job hunting. Users can store information about positions they've applied for, companies they've researched, and contacts they've made in the process. The application was built by a team of five over the course of one week, and was developed using the MEAN Stack. I developed the back-end user routing and stat tracking. On the front-end I contributed significantly on the Angular component architecture.",
+		"description": "A single page app that helps job-seekers keep track of their job search. I developed the back-end user routing and statistics tracking. On the front-end I contributed significantly on the Angular component architecture.",
 		"sourceCode": "https://github.com/InsertCleverNameHere",
-		"category": "MongoDB, ExpressJS, AngularJS, Node.js: The MEAN Stack"
+		"category": "Angular on the front-end along with Angular UI-Router for client-side routing, and Node.js (Express framework) REST services backed by MongoDB on the back-end."
 	},
 	{
 		"title": "He Really Said That",
 		"dateFinished": "2016-09-02",
 		"url": "http://www.he-really-said-that.com/",
-		"description": "Audio library of Donald J. Trump quotes. Built with JavaScript, jQuery, HandlebarsJS, HTML5, and CSS3. Skeleton was used for the basic page layout.",
+		"description": "Audio library of Donald J. Trump quotes, built with responsive design in mind. Solo project.",
 		"sourceCode": "https://github.com/he-really-said-that/he-really-said-that",
-		"category": "JavaScript, jQuery, HTML5, CSS3"
+		"category": "JavaScript, jQuery, HandlebarsJS, HTML5, CSS3, Skeleton."
 	},
 	{
 		"title": "No Spoilers",
 		"dateFinished": "2016-08-12",
 		"url": "checkWithGeoff",
-		"description": "This application was created as the Code Fellows 401: Advanced Full-Stack JavaScript mid-point project that I was a part of. The application allows users to selectively filter TV series episode summaries based on what they have and have not seen in order to avoid \"spoilers\". We were a team of three that put this app together over five days. The app was built with NodeJS, Express, and MongoDB on the back-end for data persistence. The front-end utilizes jQuery, JavaScript, HTML5, and CSS3, as well as SuperAgent to implement AJAX requests. I put together methods on our Mongoose models that controlled user interactions with the back-end data, including the important piece of controlling what the user can access based on their approved episode lists.",
+		"description": "A single page app for TV-watchers to view information about their favorite shows without spoiling the plot. Pulls data from multiple API's. I developed methods on our Mongoose models to control user episode approvals, and user routing.",
 		"sourceCode": "https://github.com/No-Spoilers/No-Spoilers",
-		"category": "NodeJSExpress, MongoDB, Mongoose, JavaScript, jQuery, HTML5, CSS3"
+		"category": "Front-end built with JavaScript, jQuery, HandlebarsJS, HTML5, and CSS3. RESTful Node.js (Express framework) services backed by MongoDB on the back-end."
 	},
 	{
 		"title": "U.S. Housing Affordability Tool",
 		"dateFinished": "2016-07-01",
 		"url": "http://atlas-housing-2.herokuapp.com/",
-		"description": "This was the Code Fellows 301: Intermediate Software Development final project that I was a part of. We were a team of five and built this application over the course of five days. I contributed significantly on the JavaScript logic driving the user interaction with the map that is the central focus of the application. I also set-up all interactions with third-party API's, including the U.S. Census API for demographic data.",
+		"description": "A single page app that helps prospective home-buyers figure out where they can afford to buy homes. I developed user interaction with the map and set up calls to pull data from U.S. Census and Zillow API's.",
 		"sourceCode": "https://github.com/lizziegooding/Housing-Affordability",
-		"category": "HTML5, CSS3, JQuery, PageJS, Express"
+		"category": "HTML5, CSS3, JavaScript, JQuery, PageJS, Express."
 	},
 	{
 	"title": "Projects Manager",
 	"dateFinished": "2016-05-15",
 	"url": "http://aaronbini.github.io/ProjectsManager/",
-	"description": "Project built with Vanilla JavaScript, HTML5, and CSS3 for managing projects and employees. This project utilizes the Window's localStorage property to act as a simple database. The end user would be an administrator at a company who needs to keep track of large numbers of projects and the employees working on those projects. Projects and employees can be added and edited, and employees can be moved from project to project.",
+	"description": "An app to help an administrator track ongoing projects and employees working on those projects, utilizing the Window's localStorage property to act as a simple database.",
 	"sourceCode": "https://github.com/aaronbini/ProjectsManager",
 	"category": "Vanilla Javascript, HTML5, CSS3"
 }, {
 	"title": "Blood Pressure Tracker",
 	"dateFinished": "not finished",
 	"url": "notLive",
-	"description": "This in-progress project will be a simple application that uses the MEAN stack in order to allow users to keep track of their daily Blood Pressure reading. This page is built with Javascript, Angular, HTML5, CSS3 and SCSS on the front-end, and uses Chart.js to allow user to view the history of their readings in chart form. The back-end utilizes NodeJS, Express, and MongoDB for persistent data. User authorization is controlled in Angular on the front-end, and by using Express middleware on the back-end.",
+	"description": "In-progress single page app that allows users to keep track of their daily Blood Pressure readings. Solo project.",
 	"sourceCode": "https://github.com/aaronbini/bpTracker",
-	"category": "The MEAN Stack: MongoDB, Express, AngularJS, Node.js"
+	"category": "RESTful Node.js services backed by MongoDB. Angular framework on the front-end."
 }, {
 	"title": "PDX Farm Finder",
 	"dateFinished": "not finished",
 	"url": "notLive",
-	"description": "This in-progress project will allow users to search for farms in the Portland area by proximity as well as by what the farm grows and sells. This project is built with PHP, a MySQL database, Javascript, HTML, and CSS. The project utilizes the Google Maps API in order to add map search functionality to the page.",
+	"description": "In-progress app that allows users to search for Portland area farms through a variety of search criteria. Utilizes the Google Maps API for better visualization. Solo project.",
 	"sourceCode": "https://github.com/aaronbini/farm_finder",
-	"category": "PHP, JavaScript, HTML5, CSS3"
+	"category": "PHP and MySQL database on the back-end. JavaScript, HTML5, CSS3 on the front-end."
 }
 ]
