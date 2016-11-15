@@ -2,10 +2,16 @@ var express = require('express'),
   port = process.env.PORT || 3000,
   app = express();
 
-app.use(express.static('./'));
+var path = require('path');
+var indexHtml = path.resolve( __dirname, './public/index.html');
+var publicPath = path.resolve( __dirname, './public');
+
+app.use(express.static(publicPath));
 
 app.get('*', function(request, response) {
-  response.sendFile('index.html', { root: '.' });
+  console.log('index html: ', indexHtml);
+  console.log('public path: ', publicPath);
+  response.sendFile(indexHtml);
 });
 
 app.listen(port, function() {

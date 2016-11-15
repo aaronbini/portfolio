@@ -4,7 +4,7 @@
   "description": "Portfolio site to highlight some completed and ongoing projects.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
@@ -17,5 +17,8 @@
     "express-request-proxy": "^1.2.0",
     "node-zillow": "1.0.1",
     "request": "^2.72.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.10.1"
   }
 }
