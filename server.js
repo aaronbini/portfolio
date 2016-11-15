@@ -3,11 +3,14 @@ var express = require('express'),
   app = express();
 
 var path = require('path');
-var indexHtml = path.resolve( __dirname, 'index.html' );
+var indexHtml = path.resolve( __dirname, './public/index.html');
+var publicPath = path.resolve( __dirname, './public');
 
-app.use(express.static('./'));
+app.use(express.static(publicPath));
 
 app.get('*', function(request, response) {
+  console.log('index html: ', indexHtml);
+  console.log('public path: ', publicPath);
   response.sendFile(indexHtml);
 });
 

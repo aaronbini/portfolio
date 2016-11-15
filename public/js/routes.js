@@ -17,14 +17,11 @@ function setRouteMapping() {
   var $projects = $('#projects');
   var $hobbies = $('#hobbies');
   var $notFound = $('#notFound');
-  // var $dummyDiv = $('#dummy');
 
-  function doNothing () {};
-
-  function showThisSection (element, callback, element2) {
+  function showThisSection (element, element2, callback) {
     $('.tab-content').hide();
     element2.empty();
-    callback();
+    if (callback) callback();
     element.fadeIn(500);
   }
 
@@ -34,15 +31,15 @@ function setRouteMapping() {
   };
 
   pageController.aboutDisplay = function () {
-    showThisSection($aboutContact, doNothing, $notFound);
+    showThisSection($aboutContact, $notFound);
   };
 
   pageController.projectsDisplay = function () {
-    showThisSection($projects, doNothing, $notFound);
+    showThisSection($projects, $notFound);
   };
 
   pageController.hobbiesDisplay = function() {
-    showThisSection($hobbies, doNothing, $notFound);
+    showThisSection($hobbies, $notFound);
   };
 
   pageController.pageNotFound = function() {
@@ -54,7 +51,7 @@ function setRouteMapping() {
         + '<img class=bacon src="img/bacon.gif"></img'
       );
     };
-    showThisSection($notFound, appendMessage, $notFound);
+    showThisSection($notFound, $notFound, appendMessage);
   };
 
   module.pageController = pageController;
