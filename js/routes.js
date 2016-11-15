@@ -17,7 +17,7 @@ function setRouteMapping() {
   var $projects = $('#projects');
   var $hobbies = $('#hobbies');
   var $notFound = $('#notFound');
-  var $dummyDiv = $('#dummy');
+  // var $dummyDiv = $('#dummy');
 
   function doNothing () {};
 
