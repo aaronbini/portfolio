@@ -12,7 +12,7 @@
 		"dateFinished": "2016-12-10",
 		"url": "https://github.com/aaronbini/BP-Tracker",
 		"description": "A single page app for tracking daily blood pressure readings. Uses Google OAuth and is synced with the Google Fit API. Users can set goals for BP readings (systolic/diastolic), #readings/week, hours of sleep/night, etc. and view their BP readings history via charts and graphs. First link above is to the client-side code, second link is to the server-side code.",
-		"sourceCode": "https://github.com/BP-Server",
+		"sourceCode": "https://github.com/aaronbini/BP-Server",
 		"category": "Angular front-end backed by Node.js (Express) REST API and MongoDB."
 	},
 	{
