@@ -1,5 +1,21 @@
 [
 	{
+		"title": "Quake Tracker",
+		"dateFinished": "not finished",
+		"url": "notLive",
+		"description": "Map-based web app for viewing all earthquakes that have occurred in the last 30 days in the Pacific NW, and around the world. Pulls in data from the USGS Earthquake API. Hover over earthquakes on the map to view detailed information about each quake. Ongoing work includes aggregating earthquake data and presenting in a sidebar, and allowing users to query for more specific information they are interested in.",
+		"sourceCode": "https://github.com/Quake-Tracker",
+		"category": "Angular 1.5 component framework on the front-end."
+	},
+	{
+		"title": "BP Tracker",
+		"dateFinished": "2016-12-10",
+		"url": "https://github.com/aaronbini/BP-Tracker",
+		"description": "A single page app for tracking daily blood pressure readings. Uses Google OAuth and is synced with the Google Fit API. Users can set goals for BP readings (systolic/diastolic), #readings/week, hours of sleep/night, etc. and view their BP readings history via charts and graphs. First link above is to the client-side code, second link is to the server-side code.",
+		"sourceCode": "https://github.com/BP-Server",
+		"category": "Angular front-end backed by Node.js (Express) REST API and MongoDB."
+	},
+	{
 		"title": "Clever Job Hunter",
 		"dateFinished": "2016-09-16",
 		"url": "http://insertclevernamehere.herokuapp.com/#/",
