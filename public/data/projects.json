@@ -55,13 +55,6 @@
 	"sourceCode": "https://github.com/aaronbini/ProjectsManager",
 	"category": "Vanilla Javascript, HTML5, CSS3"
 }, {
-	"title": "Blood Pressure Tracker",
-	"dateFinished": "not finished",
-	"url": "notLive",
-	"description": "In-progress single page app that allows users to keep track of their daily Blood Pressure readings. Solo project.",
-	"sourceCode": "https://github.com/aaronbini/bpTracker",
-	"category": "RESTful Node.js services backed by MongoDB. Angular framework on the front-end."
-}, {
 	"title": "PDX Farm Finder",
 	"dateFinished": "not finished",
 	"url": "notLive",
