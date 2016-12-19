@@ -2,9 +2,8 @@
 	{
 		"title": "Quake Tracker",
 		"dateFinished": "not finished",
-		"url": "notLive",
 		"description": "Map-based web app for viewing all earthquakes that have occurred in the last 30 days in the Pacific NW, and around the world. Pulls in data from the USGS Earthquake API. Hover over earthquakes on the map to view detailed information about each quake. Ongoing work includes aggregating earthquake data and presenting in a sidebar, and allowing users to query for more specific information they are interested in.",
-		"sourceCode": "https://github.com/Quake-Tracker",
+		"sourceCode": "https://github.com/aaronbini/Quake-Tracker",
 		"category": "Angular 1.5 component framework on the front-end."
 	},
 	{
@@ -34,7 +33,7 @@
 	{
 		"title": "No Spoilers",
 		"dateFinished": "2016-08-12",
-		"url": "checkWithGeoff",
+		"url": "http://insertclevernamehere.herokuapp.com/#/",
 		"description": "A single page app for TV-watchers to view information about their favorite shows without spoiling the plot. Pulls data from multiple API's. I developed methods on our Mongoose models to control user episode approvals, and user routing.",
 		"sourceCode": "https://github.com/No-Spoilers/No-Spoilers",
 		"category": "Front-end built with JavaScript, jQuery, HandlebarsJS, HTML5, and CSS3. RESTful Node.js (Express framework) services backed by MongoDB on the back-end."
@@ -57,7 +56,6 @@
 }, {
 	"title": "PDX Farm Finder",
 	"dateFinished": "not finished",
-	"url": "notLive",
 	"description": "In-progress app that allows users to search for Portland area farms through a variety of search criteria. Utilizes the Google Maps API for better visualization. Solo project.",
 	"sourceCode": "https://github.com/aaronbini/farm_finder",
 	"category": "PHP and MySQL database on the back-end. JavaScript, HTML5, CSS3 on the front-end."

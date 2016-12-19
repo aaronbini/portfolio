@@ -2,7 +2,7 @@
   function Project(obj) {
     this.title = obj.title;
     this.dateFinished = obj.dateFinished;
-    this.url = obj.url;
+    this.url = obj.url || null;
     this.description = obj.description;
     this.sourceCode = obj.sourceCode;
     this.category = obj.category;

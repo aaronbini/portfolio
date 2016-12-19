@@ -23,7 +23,9 @@
       <h3>{{title}}</h3>
       <div>
         <time pubdate>{{finishStatus}}</time>
-        <address class="no-bottom-margin"><a href='{{url}}'>View Project</a></address>
+        {{#if url}}
+          <address class="no-bottom-margin"><a href='{{url}}'>View Project</a></address>
+        {{/if}}
         <address><a href='{{sourceCode}}'>View Source Code</a></address>
       </div>
       <section class="description">{{description}}</section>
