@@ -1,0 +1,32 @@
+[
+  {
+		"title": "He Really Said That",
+		"dateFinished": "2016-09-02",
+		"url": "http://www.he-really-said-that.com/",
+		"description": "Audio library of Donald J. Trump quotes, built with responsive design in mind. Solo project.",
+		"sourceCode": "https://github.com/he-really-said-that/he-really-said-that",
+		"category": "JavaScript, jQuery, HandlebarsJS, HTML5, CSS3, Skeleton."
+  },
+  {
+		"title": "No Spoilers",
+		"dateFinished": "2016-08-12",
+		"url": "http://insertclevernamehere.herokuapp.com/#/",
+		"description": "A single page app for TV-watchers to view information about their favorite shows without spoiling the plot. Pulls data from multiple API's. I developed methods on our Mongoose models to control user episode approvals, and user routing.",
+		"sourceCode": "https://github.com/No-Spoilers/No-Spoilers",
+		"category": "Front-end built with JavaScript, jQuery, HandlebarsJS, HTML5, and CSS3. RESTful Node.js (Express framework) services backed by MongoDB on the back-end."
+  },
+  {
+    "title": "Projects Manager",
+    "dateFinished": "2016-05-15",
+    "url": "http://aaronbini.github.io/ProjectsManager/",
+    "description": "An app to help an administrator track ongoing projects and employees working on those projects, utilizing the Window's localStorage property to act as a simple database.",
+    "sourceCode": "https://github.com/aaronbini/ProjectsManager",
+    "category": "Vanilla Javascript, HTML5, CSS3"
+  }, {
+    "title": "PDX Farm Finder",
+    "dateFinished": "not finished",
+    "description": "In-progress app that allows users to search for Portland area farms through a variety of search criteria. Utilizes the Google Maps API for better visualization. Solo project.",
+    "sourceCode": "https://github.com/aaronbini/farm_finder",
+    "category": "PHP and MySQL database on the back-end. JavaScript, HTML5, CSS3 on the front-end."
+  }
+]
