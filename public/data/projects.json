@@ -1,6 +1,6 @@
 [
 	{
-		"title": "Emissions Tracker",
+		"title": "Mile Tracker",
 		"dateFinished": "2017-03-01",
 		"url": "https://ee-mile-tracker.herokuapp.com/",
 		"description": "Built to help companies track their travel mileage and associated carbon dioxide emissions. Utilized by employees at Equal Exchange, a multi-million dollar fair-trade coffee company, who have tracked over 400,000 miles and 200,000 pounds of carbon dioxide emissions.",
